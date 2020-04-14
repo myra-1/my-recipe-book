@@ -6,7 +6,7 @@ console.log("JWT: ", jsonWebToken)
 let apiUrl
 
 const apiUrls = {
-    production: 'http://localhost:3000/api',
+    production: 'http://my-recipe-book-1.herokuapp.com/api',
     development: 'http://localhost:3000/api'
 }
 
@@ -17,7 +17,7 @@ if (window.location.hostname === 'localhost') {
 }
 
 const api = axios.create({
-    baseURL: apiUrl,
+  baseURL: apiUrl,
     headers: {
         Authorization: `Bearer ${jsonWebToken}`,
         'Access-Control-Allow-Origin': '*'
