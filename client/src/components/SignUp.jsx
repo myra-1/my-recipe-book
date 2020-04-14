@@ -8,7 +8,6 @@ class SignUp extends Component {
 
         this.state = {
             username: '',
-            email: '',
             password: '',
             passwordConfirmation: '',
             isError: false,
@@ -35,7 +34,7 @@ class SignUp extends Component {
             .catch(error => {
                 console.error(error)
                 this.setState({
-                    email: '',
+                    username: '',
                     password: '',
                     passwordConfirmation: '',
                     isError: true,
@@ -73,7 +72,7 @@ class SignUp extends Component {
                         placeholder="Enter username"
                         onChange={this.handleChange}
                     />
-                    <label>Email address</label>
+                    {/* <label>Email address</label>
                     <input
                         required
                         type="email"
@@ -81,7 +80,7 @@ class SignUp extends Component {
                         value={email}
                         placeholder="Enter email"
                         onChange={this.handleChange}
-                    />
+                    /> */}
                     <label>Password</label>
                     <input
                         required

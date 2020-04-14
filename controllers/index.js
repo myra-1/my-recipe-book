@@ -1,21 +1,20 @@
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const User = require('../models/user')
-const Product = require('../models/product')
+const Recipe = require('../models/Recipe')
 const db = require('../db')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const SALT_ROUNDS = 11
-const TOKEN_KEY = 'areallylonggoodkey'
+const TOKEN_KEY = '3e7AOpb340PwMz891JKuvkslW74oPZd'
 
 const signUp = async (req, res) => {
     try {
-        const { username, email, password } = req.body
+        const { username, password } = req.body
         const password_digest = await bcrypt.hash(password, SALT_ROUNDS)
         const user = await new User({
             username,
-            email,
             password_digest
         })
 
@@ -23,8 +22,7 @@ const signUp = async (req, res) => {
 
         const payload = {
             id: user._id,
-            username: user.username,
-            email: user.email
+            username: user.username
         }
 
         const token = jwt.sign(payload, TOKEN_KEY)
@@ -44,8 +42,7 @@ const signIn = async (req, res) => {
         if (await bcrypt.compare(password, user.password_digest)) {
             const payload = {
                 id: user._id,
-                username: user.username,
-                email: user.email
+                username: user.username
             }
 
             const token = jwt.sign(payload, TOKEN_KEY)
@@ -70,60 +67,60 @@ const verifyUser = (req, res) => {
 
 const changePassword = async (req, res) => { }
 
-const getProducts = async (req, res) => {
+const getRecipes = async (req, res) => {
     try {
-        const products = await Product.find()
-        res.json(products)
+        const recipes = await Recipe.find()
+        res.json(recipes)
     } catch (error) {
         res.status(500).json({ error: error.message })
     }
 }
 
-const getProduct = async (req, res) => {
+const getRecipe = async (req, res) => {
     try {
         const { id } = req.params
-        const product = await Product.findById(id)
-        if (product) {
-            return res.json(product)
+        const recipe = await Recipe.findById(id)
+        if (recipe) {
+            return res.json(recipe)
         }
-        res.status(404).json({ message: 'Product not found!' })
+        res.status(404).json({ message: 'Recipe not found!' })
     } catch (error) {
         res.status(500).json({ error: error.message })
     }
 }
 
-const createProduct = async (req, res) => {
+const createRecipe = async (req, res) => {
     try {
-        const product = await new Product(req.body)
-        await product.save()
-        res.status(201).json(product)
+        const recipe = await new Recipe(req.body)
+        await recipe.save()
+        res.status(201).json(recipe)
     } catch (error) {
         console.log(error)
         res.status(500).json({ error: error.message })
     }
 }
 
-const updateProduct = async (req, res) => {
+const updateRecipe = async (req, res) => {
     const { id } = req.params
-    await Product.findByIdAndUpdate(id, req.body, { new: true }, (error, product) => {
+    await Recipe.findByIdAndUpdate(id, req.body, { new: true }, (error, recipe) => {
         if (error) {
             return res.status(500).json({ error: error.message })
         }
-        if (!product) {
-            return res.status(404).json({ message: 'Product not found!' })
+        if (!recipe) {
+            return res.status(404).json({ message: 'Recipe not found!' })
         }
         res.status(200).json(product)
     })
 }
 
-const deleteProduct = async (req, res) => {
+const deleteRecipe = async (req, res) => {
     try {
         const { id } = req.params;
-        const deleted = await Product.findByIdAndDelete(id)
+        const deleted = await Recipe.findByIdAndDelete(id)
         if (deleted) {
-            return res.status(200).send("Product deleted")
+            return res.status(200).send("Recipe deleted")
         }
-        throw new Error("Product not found")
+        throw new Error("Recipe not found")
     } catch (error) {
         res.status(500).json({ error: error.message })
     }
@@ -134,9 +131,9 @@ module.exports = {
     signIn,
     verifyUser,
     changePassword,
-    createProduct,
-    getProducts,
-    getProduct,
-    updateProduct,
-    deleteProduct
+    createRecipe,
+    getRecipes,
+    getRecipe,
+    updateRecipe,
+    deleteRecipe
 }
