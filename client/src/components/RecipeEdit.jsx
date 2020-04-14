@@ -47,7 +47,7 @@ class RecipeEdit extends Component {
         const { recipe, updated } = this.state
 
         if (updated) {
-            return <Redirect to={`${apiUrl}/recipes/${this.props.match.params.id}`} />
+            return <Redirect to={`/recipes/${this.props.match.params.id}`} />
         }
 
         return (

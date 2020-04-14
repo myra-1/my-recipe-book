@@ -38,7 +38,7 @@ class RecipeCreate extends Component {
         const { recipe, created } = this.state
 
         if (created) {
-            return <Redirect to={`${apiUrl}/recipes`} />
+            return <Redirect to={`/recipes`} />
         }
         return (
             <Layout user={this.props.user}>

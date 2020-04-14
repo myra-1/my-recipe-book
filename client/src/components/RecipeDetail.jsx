@@ -33,7 +33,7 @@ class RecipeDetail extends Component {
                         <div className="name">{recipe.name}</div>
                         <div className="description">{recipe.description}</div>
                         <div className="button-container">
-                        <button className="edit-button"><Link className="edit-link" to={`${apiUrl}/recipes/${recipe._id}/edit`}>Edit</Link></button>
+                        <button className="edit-button"><Link className="edit-link" to={`/recipes/${recipe._id}/edit`}>Edit</Link></button>
                             <button className="delete-button" onClick={() => deleteRecipe(recipe._id)}>Delete</button>
                         </div>
                     </div>
