@@ -16,9 +16,9 @@ router.post("/change-password", controllers.changePassword);
 // router.get('/my-recipes', restrict, controllers.getMyRecipes)
 // router.get('/my-recipes/:id', restrict, controllers.getMyRecipe)
 
-router.get('/recipes', restrict, controllers.getRecipes)
-router.get('/recipes/:id', restrict, controllers.getRecipe)
-router.post('/recipes', restrict, controllers.createRecipe)
+router.get('/recipes', controllers.getRecipes)
+router.get('/recipes/:id', controllers.getRecipe)
+router.post('/recipes', controllers.createRecipe)
 router.put('/recipes/:id', restrict, controllers.updateRecipe)
 router.delete('/recipes/:id', restrict, controllers.deleteRecipe)
 

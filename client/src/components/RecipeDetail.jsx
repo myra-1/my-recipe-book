@@ -23,8 +23,14 @@ class RecipeDetail extends Component {
     this.setState({ recipe });
   }
 
+  handleDelete = async (id) => {
+    await deleteRecipe(id)
+    this.props.history.push('/')
+  }
+
   render() {
     const { recipe } = this.state;
+    const { user } = this.props
     return (
       <Layout user={this.props.user}>
         <div className="recipe-detail">
@@ -39,20 +45,23 @@ class RecipeDetail extends Component {
             <div className="serves">{recipe.serves}</div>
             <div className="ingredients">{recipe.ingredients}</div>
             <div className="instructions">{recipe.instructions}</div>
-
-            <div className="button-container">
-              <button className="edit-button">
-                <Link className="edit-link" to={`/recipes/${recipe._id}/edit`}>
-                  Edit
+            {user && recipe.user_id === user._id ?
+              <div className="button-container">
+                <button className="edit-button">
+                  <Link className="edit-link" to={`/recipes/${recipe._id}/edit`}>
+                    Edit
                 </Link>
+                </button>
+                <button
+                  className="delete-button"
+                  onClick={() => this.handleDelete(recipe._id)}
+                >
+                  Delete
               </button>
-              <button
-                className="delete-button"
-                onClick={() => deleteRecipe(recipe._id)}
-              >
-                Delete
-              </button>
-            </div>
+              </div>
+              :
+              <></>
+            }
           </div>
         </div>
       </Layout>
