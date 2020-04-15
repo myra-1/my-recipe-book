@@ -27,10 +27,9 @@ class RecipeCreate extends Component {
   }
 
   componentDidMount = async () => {
-    const user = await verifyUser()
-    this.setState({ user: user.user.id })
+    this.setState({ recipe: { user: this.props.user._id } })
+
     console.log(this.state)
-    console.log(user.user.id)
   }
 
   handleChange = (event) => {
