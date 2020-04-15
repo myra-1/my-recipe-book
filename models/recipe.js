@@ -14,7 +14,7 @@ const Recipe = new Schema(
     serves: { type: String, required: true },
     ingredients: { type: String, required: false },
     instructions: { type: String, required: false },
-    user_id: { type: Schema.Types.ObjectId, ref: 'user_id' }
+    user_id: { type: Schema.Types.ObjectId, ref: 'user', required: true }
   },
   { timestamps: true }
 );
