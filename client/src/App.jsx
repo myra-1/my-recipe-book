@@ -37,14 +37,11 @@ class App extends Component {
     return (
       <div className="app">
         <Switch>
-          <Route exact path="/" render={() => <Home user={user} />} />
+          <Route exact path="/" render={(props) => <Recipes {...props} user={user} />} />
           <Route exact path="/sign-up" render={props => <SignUp setUser={setUser} history={props.history} />} />
           <Route exact path="/sign-in" render={props => <SignIn setUser={setUser} history={props.history} />} />
           <Route exact path="/sign-out" render={props => <SignOut user={user} clearUser={clearUser} history={props.history} />} />
-          {/* ^ add conditional for if user exists */}
           <Route exact path="/recipes" render={(props) => user ? <MyRecipes {...props} user={user} /> : <Recipes {...props} user={user} />} />
-          {/* <Route render={() => <MyRecipes user={user} />} /> */}
-          {/* ^ add conditional for if user exists */}
           <Route exact path="/add-recipe" render={() => user ? <RecipeCreate user={user} /> : <Redirect to='/signup' />} />
           <Route exact path="/recipes/:id/edit" render={(props) => user ? <RecipeEdit {...props} user={user} /> : <Redirect to='/' />} />
           <Route exact path="/recipes/:id" render={(props) => <RecipeDetail {...props} history={props.history} user={user} />} />

@@ -6,8 +6,8 @@ import { createRecipe } from "../services/recipe";
 import { verifyUser } from '../services/user'
 
 class RecipeCreate extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       recipe: {
         name: "",
@@ -20,7 +20,7 @@ class RecipeCreate extends Component {
         serves: "",
         ingredients: "",
         instructions: "",
-        user_id: ""
+        user_id: this.props.user._id
       },
       created: false,
     };
@@ -28,20 +28,16 @@ class RecipeCreate extends Component {
 
   componentDidMount = async () => {
     this.setState({ recipe: { user_id: this.props.user._id } })
-
-    console.log(this.state)
   }
 
   handleChange = (event) => {
     const { name, value } = event.target;
-    console.log(event.target);
     this.setState({
       recipe: {
         ...this.state.recipe,
         [name]: value,
       },
     });
-    console.log(this.state);
   };
 
   handleSubmit = async (event) => {
