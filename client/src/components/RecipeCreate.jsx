@@ -3,6 +3,7 @@ import "./RecipeCreate.css";
 import Layout from "./shared/Layout";
 import { Redirect } from "react-router-dom";
 import { createRecipe } from "../services/recipe";
+import { verifyUser } from '../services/user'
 
 class RecipeCreate extends Component {
   constructor() {
@@ -19,9 +20,17 @@ class RecipeCreate extends Component {
         serves: "",
         ingredients: "",
         instructions: "",
+        user: ""
       },
       created: false,
     };
+  }
+
+  componentDidMount = async () => {
+    const user = await verifyUser()
+    this.setState({ user: user.user.id })
+    console.log(this.state)
+    console.log(user.user.id)
   }
 
   handleChange = (event) => {

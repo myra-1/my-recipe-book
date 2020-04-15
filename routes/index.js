@@ -11,7 +11,12 @@ router.post('/sign-in', controllers.signIn)
 router.get('/verify', controllers.verifyUser)
 router.post('/change-password', controllers.changePassword)
 
-router.get('/recipes', controllers.getRecipes)
+// router.get('/users', controllers.users)
+
+// router.get('/my-recipes', restrict, controllers.getMyRecipes)
+// router.get('/my-recipes/:id', restrict, controllers.getMyRecipe)
+
+router.get('/recipes', restrict, controllers.getRecipes)
 router.get('/recipes/:id', restrict, controllers.getRecipe)
 router.post('/recipes', restrict, controllers.createRecipe)
 router.put('/recipes/:id', restrict, controllers.updateRecipe)
