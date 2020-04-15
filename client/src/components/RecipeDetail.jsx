@@ -29,16 +29,16 @@ class RecipeDetail extends Component {
       <Layout user={this.props.user}>
         <div className="recipe-detail">
           <div className="detail">
-            <div className="name">{recipe.name}</div>
             <img className="img" src={recipe.img} />
-            <div className="img">{recipe.course}</div>
-            <div className="img">{recipe.difficulty}</div>
-            <div className="img">{recipe.cuisine}</div>
-            <div className="img">{recipe.preptime}</div>
-            <div className="img">{recipe.cooktime}</div>
-            <div className="img">{recipe.serves}</div>
-            <div className="img">{recipe.ingredients}</div>
-            <div className="img">{recipe.instructions}</div>
+            <div className="name">{recipe.name}</div>
+            <div className="course">{recipe.course}</div>
+            <div className="difficulty">{recipe.difficulty}</div>
+            <div className="cuisine">{recipe.cuisine}</div>
+            <div className="preptime">{recipe.preptime}</div>
+            <div className="cooktime">{recipe.cooktime}</div>
+            <div className="serves">{recipe.serves}</div>
+            <div className="ingredients">{recipe.ingredients}</div>
+            <div className="instructions">{recipe.instructions}</div>
 
             <div className="button-container">
               <button className="edit-button">

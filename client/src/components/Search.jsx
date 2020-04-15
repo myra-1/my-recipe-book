@@ -4,7 +4,7 @@ import './Search.css'
 const Search = (props) => {
     return (
         <form className="search-form" onSubmit={(e) => props.onSubmit(e)}>
-            <input
+            {/* <input
                 className="search-input"
                 value={props.value}
                 onChange={(e) => props.onChange(e)}
@@ -12,7 +12,7 @@ const Search = (props) => {
                 placeholder="Search"
                 type="text"
                 autoFocus
-            />
+            /> */}
         </form>
     )
 }
