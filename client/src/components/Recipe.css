@@ -23,10 +23,31 @@
   padding: 10px;
 }
 
-/* .price {
-  font-size: 18px;
-  padding: 10px;
-} */
+.border-style {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  font-size: 1.5em;
+}
+.cook-time {
+  /* background-color: lightgray;
+  padding: 20px; */
+  grid-column-start: 1;
+  grid-column-end: 2;
+  padding: 10px 30px;
+  justify-content: center;
+  align-content: center;
+}
+.difficulty {
+  background-color: lightgray;
+  padding: 20px;
+  grid-column-start: 2;
+  /* text-align: center; */
+  padding: 10px 30px;
+  /* align-content: center;
+  justify-content: center; */
+  background-color: lightgray;
+}
 
 @media (max-width: 500px) {
   .recipe {
