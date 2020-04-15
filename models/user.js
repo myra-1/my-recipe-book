@@ -5,7 +5,7 @@ const User = new Schema(
   {
     username: { type: String, required: true },
     password_digest: { type: String, required: true },
-    recipes: [{ type: Schema.Types.ObjectId, ref: 'recipes' }]
+    // recipes: [{ type: Schema.Types.ObjectId, ref: 'recipes' }]
   },
   { timestamps: true }
 )

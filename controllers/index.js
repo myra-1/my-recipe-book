@@ -118,6 +118,7 @@ const updateRecipe = async (req, res) => {
   );
 };
 
+
 const deleteRecipe = async (req, res) => {
   try {
     const { id } = req.params;
@@ -142,3 +143,4 @@ module.exports = {
   updateRecipe,
   deleteRecipe,
 };
+

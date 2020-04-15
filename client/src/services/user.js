@@ -1,5 +1,6 @@
 import api from "./apiConfig";
 
+
 export const signUp = async (credentials) => {
   try {
     const resp = await api.post("/sign-up", credentials);
@@ -46,3 +47,4 @@ export const verifyUser = async () => {
   }
   return false;
 };
+
