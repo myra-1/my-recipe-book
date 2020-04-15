@@ -14,6 +14,7 @@ const main = async () => {
       prep_time: "10 min",
       cook_time: "8 min",
       serves: "4 people",
+      difficulty: "MEDIUM",
       //   ingredients:
       //     ["1 1/2 pounds 80% lean 20% fat ground beef", "1 tbsp Worcestershire sauce", "1 1/2 tsp seasoning salt", "1 tsp garlic powder", "1/2 tsp ground black pepper", "4 slices of cheese", "4 hamburger buns", "optional: hamburger toppings - lettuce tomato, onion, pickles, ketchup, mustard, mayo, etc."],
       //   instructions: ["Preheat the grill to 375 degrees F (medium-high).", "In a large bowl, add the beef. Sprinkle evenly with the Worcestershire sauce, seasoning salt, garlic powder, and pepper. Use your hands to mix the ingredients until they are just combined.",
