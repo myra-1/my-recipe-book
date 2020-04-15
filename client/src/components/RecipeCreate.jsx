@@ -20,14 +20,14 @@ class RecipeCreate extends Component {
         serves: "",
         ingredients: "",
         instructions: "",
-        user: ""
+        user_id: ""
       },
       created: false,
     };
   }
 
   componentDidMount = async () => {
-    this.setState({ recipe: { user: this.props.user._id } })
+    this.setState({ recipe: { user_id: this.props.user._id } })
 
     console.log(this.state)
   }
