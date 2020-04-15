@@ -1,7 +1,10 @@
-import React from 'react'
-import './Footer.css'
+import React from "react";
+import "./Footer.css";
 
-const Footer = () =>
-    <footer></footer>
+const Footer = () => (
+  <footer>
+    {/* <small className="FooterLabel"> Webpage by Recipe Squad&copy; 2020</small> */}
+  </footer>
+);
 
-export default Footer
+export default Footer;

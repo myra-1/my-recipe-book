@@ -3,7 +3,7 @@ import "./RecipeCreate.css";
 import Layout from "./shared/Layout";
 import { Redirect } from "react-router-dom";
 import { createRecipe } from "../services/recipe";
-import { verifyUser } from '../services/user'
+import { verifyUser } from "../services/user";
 
 class RecipeCreate extends Component {
   constructor(props) {
@@ -20,15 +20,15 @@ class RecipeCreate extends Component {
         serves: "",
         ingredients: "",
         instructions: "",
-        user_id: this.props.user._id
+        user_id: this.props.user._id,
       },
       created: false,
     };
   }
 
   componentDidMount = async () => {
-    this.setState({ recipe: { user_id: this.props.user._id } })
-  }
+    this.setState({ recipe: { user_id: this.props.user._id } });
+  };
 
   handleChange = (event) => {
     const { name, value } = event.target;
@@ -54,6 +54,10 @@ class RecipeCreate extends Component {
     }
     return (
       <Layout user={this.props.user}>
+        <div className="title">
+          <h1>Create your own Recipe</h1>
+          <img className="chef-img" src="https://i.imgur.com/7cGpFC9.png"></img>
+        </div>
         <form className="create-form" onSubmit={this.handleSubmit}>
           <input
             className="input-name"
@@ -121,8 +125,8 @@ class RecipeCreate extends Component {
             onChange={this.handleChange}
           />
           <textarea
-            className="textarea-description"
-            // rows={10}
+            className="textarea-ingredients"
+            rows={5}
             placeholder="Ingredients"
             value={recipe.ingredients}
             name="ingredients"
@@ -130,8 +134,8 @@ class RecipeCreate extends Component {
             onChange={this.handleChange}
           />
           <textarea
-            className="textarea-description"
-            // rows={10}
+            className="textarea-instructions"
+            rows={10}
             placeholder="Instruction"
             value={recipe.instructions}
             name="instructions"
