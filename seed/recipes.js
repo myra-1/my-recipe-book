@@ -21,6 +21,7 @@ const main = async () => {
       //     "Place the burgers on the grill. Cook 4-5 minutes on the first side. Flip the burgers over and cook an additional 4-5 minutes, until the burgers have reached the desired doneness.",
       //     "If adding cheese, lay a slice of cheese on each burger patty about 1 minute before taking the burgers off the grill, so the cheese has a chance to melt.",
       //     "Serve the burgers on hamburger buns with optional hamburger toppings."]
+      user_id: "5e962c8dd096d212d08ef39c",
     },
     {
       name: "Creamy Tomato Soup",
@@ -50,6 +51,7 @@ const main = async () => {
       //   "Season to taste with salt, pepper, and remaining 1 tsp. sugar.",
       //   "Add more cream, if desired.",
       // ],
+      user_id: "5e962c8dd096d212d08ef39c",
     },
     {
       name: "Pancakes from Scratch",
@@ -71,6 +73,7 @@ const main = async () => {
       //   "Mix the dry items first. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth.",
       //   "Heat a lightly oiled griddle or frying pan over medium high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.",
       // ],
+      user_id: "5e962c8dd096d212d08ef39c",
     },
   ];
 
