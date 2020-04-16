@@ -24,11 +24,11 @@ class MyRecipes extends Component {
     const recipes = this.state.recipes.filter(recipe => (
       recipe.user_id === this.props.user._id
     )).map(((recipe, index) =>
-    <Recipe _id={recipe._id} name={recipe.name} img={recipe.img} difficulty={recipe.difficulty} cooktime={recipe.cooktime} key={index} />
+      <Recipe _id={recipe._id} name={recipe.name} img={recipe.img} difficulty={recipe.difficulty} cooktime={recipe.cooktime} key={index} />
     ))
     return (
       <Layout user={this.props.user}>
-        <Search onSubmit={this.handleSubmit} value={this.state.filterValue} onChange={this.handleSearchChange} />
+        {/* <Search onSubmit={this.handleSubmit} value={this.state.filterValue} onChange={this.handleSearchChange} /> */}
         <form className="sort-container" onSubmit={this.handleSubmit}>
           <label htmlFor="sort">SORT BY:</label>
           <select className="sort" value={this.state.selectValue} onChange={this.handleSortChange}>
@@ -39,10 +39,10 @@ class MyRecipes extends Component {
           </select>
         </form>
         <div className="recipes">
-          { recipes }
+          {recipes}
         </div>
       </Layout>
     )
-    }
+  }
 }
-  export default MyRecipes;
+export default MyRecipes;
