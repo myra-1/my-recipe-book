@@ -55,106 +55,123 @@ class RecipeEdit extends Component {
       return <Redirect to={`/recipes/${this.props.match.params.id}`} />;
     }
 
+    let divImage = recipe.img;
+
     return (
+      
       <Layout user={this.props.user}>
-        <div className="recipe-edit">
-          <div className="image-container">
-            <img
-              className="edit-recipe-image"
-              src={recipe.img}
-              alt={recipe.name}
-            />
-            <form onSubmit={this.handleSubmit}>
-              <input
-                className="input-image-link"
-                placeholder="Image Link"
-                value={recipe.img}
-                name="img"
-                required
-                onChange={this.handleChange}
-              />
-            </form>
-          </div>
-          <form className="edit-form" onSubmit={this.handleSubmit}>
-            <input
-              className="input-name"
-              placeholder="Name"
-              value={recipe.name}
-              name="name"
-              required
-              autoFocus
-              onChange={this.handleChange}
-            />
-            <input
-              className="input-cuisine"
-              placeholder="Cuisine"
-              value={recipe.name}
-              name="cuisine"
-              required
-              autoFocus
-              onChange={this.handleChange}
-            />
-            <input
-              className="input-difficulty"
-              placeholder="Difficulty"
-              value={recipe.difficulty}
-              name="difficulty"
-              required
-              autoFocus
-              onChange={this.handleChange}
-            />
-            <input
-              className="input-preptime"
-              placeholder="Prep-time"
-              value={recipe.preptime}
-              name="preptime"
-              required
-              autoFocus
-              onChange={this.handleChange}
-            />
-            <input
-              className="input-cooktime"
-              placeholder="Cook-time"
-              value={recipe.cooktime}
-              name="cooktime"
-              required
-              autoFocus
-              onChange={this.handleChange}
-            />
-            <input
-              className="input-serves"
-              placeholder="Serves"
-              value={recipe.serves}
-              name="serves"
-              required
-              autoFocus
-              onChange={this.handleChange}
-            />
-            <textarea
-              className="textarea-ingredients"
-              // rows={10}
-              // cols={78}
-              placeholder="Ingredients"
-              value={recipe.ingredients}
-              name="ingredients"
-              required
-              onChange={this.handleChange}
-            />
-            <textarea
-              className="textarea-instructions"
-              // rows={10}
-              // cols={78}
-              placeholder="Instructions"
-              value={recipe.instructions}
-              name="instructions"
-              required
-              onChange={this.handleChange}
-            />
-            <button type="submit" className="save-button">
-              Save
-            </button>
-          </form>
+        <form className="form" onSubmit={this.handleSubmit}>
+
+        <div className="div-image" style={{ backgroundImage: "url(" + divImage + ")"}}>
+        </div> 
+        
+        {/* <div className="form"> */}
+        <div>
+          <label for="input-image-link">Image Link</label>
+          <input
+            className="input-image-link"
+            value={recipe.img}
+            name="img"
+            required
+            onChange={this.handleChange}
+        />
         </div>
+        <div>
+        <label for="input-name">Dish Name</label>
+        <input
+          className="input-name"
+          value={recipe.name}
+          name="name"
+          required
+          autoFocus
+          onChange={this.handleChange}
+          />
+        </div>
+        <div>
+        <label for="input-cuisine">Cuisine</label>
+        <input
+          className="input-cuisine"
+          value={recipe.cuisine}
+          name="cuisine"
+          required
+          autoFocus
+          onChange={this.handleChange}
+          />
+        </div>
+        <div>
+        <label for="input-difficulty">Difficulty</label>
+        <input
+          className="input-difficulty"
+          value={recipe.difficulty}
+          name="difficulty"
+          required
+          autoFocus
+          onChange={this.handleChange}
+          />
+        </div>
+        <div>
+        <label for="input-preptime">Prep Time</label>
+        <input
+          className="input-preptime"
+          value={recipe.preptime}
+          name="preptime"
+          required
+          autoFocus
+          onChange={this.handleChange}
+          />
+        </div>
+        <div>
+        <label for="input-cooktime">Cook Time</label>
+        <input
+          className="input-cooktime"
+          value={recipe.cooktime}
+          name="cooktime"
+          required
+          autoFocus
+          onChange={this.handleChange}
+          />
+        </div>
+        <div>
+        <label for="input-serves">Serves</label>
+        <input
+          className="input-serves"
+          value={recipe.serves}
+          name="serves"
+          required
+          autoFocus
+          onChange={this.handleChange}
+          />
+        </div>
+        <div>
+        <label for="textarea-ingredients">Ingredients</label>
+        <textarea
+          className="textarea-ingredients"
+          rows={10}
+          cols={78}
+          value={recipe.ingredients}
+          name="ingredients"
+          required
+          onChange={this.handleChange}
+        />
+        </div>
+        <div>
+        <label for="textarea-instructions">Instructions</label>
+        <textarea
+          className="textarea-instructions"
+          rows={10}
+          cols={78}
+          value={recipe.instructions}
+          name="instructions"
+          required
+          onChange={this.handleChange}
+          />
+          </div>
+        {/* </div> */}
+        <button type="submit" className="save-button">
+          Save
+        </button>
+      </form>
+    
       </Layout>
     );
   }
