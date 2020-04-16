@@ -19,6 +19,7 @@ class Recipes extends Component {
 
   async componentDidMount() {
     const recipes = await getRecipes()
+    console.log(recipes)
     this.setState({ recipes })
   }
 
@@ -83,7 +84,7 @@ class Recipes extends Component {
           </select>
         </form>
         <div className="recipes">
-          { RECIPES }
+          {RECIPES}
         </div>
       </Layout>
     )

@@ -27,7 +27,7 @@ nav {
   opacity: 72%;
   text-align: center;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 18px;
   flex: 1;
   max-width: 30vw;
   transition: 250ms all;
@@ -52,7 +52,10 @@ nav {
 .welcome {
   padding: 0 100px;
 }
-
+.salad-logo {
+  width: 50px;
+  height: 50px;
+}
 a {
   text-decoration: none;
   color: black;
