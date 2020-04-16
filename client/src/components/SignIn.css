@@ -330,3 +330,7 @@ button {
   width: 80%;
   margin: 4em auto;
 }
+
+@media (max-width: 500px) {
+
+}
