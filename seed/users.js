@@ -9,8 +9,7 @@ const main = async () => {
   const users = [...Array(1)].map(user => (
     {
       username: faker.name.firstName(),
-      password_digest: faker.random.uuid(),
-      // recipes:[]
+      password_digest: faker.random.uuid()
     }
   ))
 

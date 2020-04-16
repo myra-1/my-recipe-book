@@ -8,7 +8,7 @@ const Recipe = (props) => {
         <img className="recipe-image" src={props.img} alt={props.name} />
         <div className="recipe-name">{props.name}</div>
         <div className="border-style">
-          <p className="cook-time">{props.cook_time}</p>
+          <p className="cook-time">{props.cooktime}</p>
           <p className="difficulty">{props.difficulty}</p>
         </div>
       </Link>

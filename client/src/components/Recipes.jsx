@@ -68,7 +68,7 @@ class Recipes extends Component {
   render() {
     const recipes = this.state.filteredRecipes ? this.state.filteredRecipes : this.state.recipes
     const RECIPES = recipes.map((recipe, index) =>
-      <Recipe _id={recipe._id} name={recipe.name} img={recipe.img} difficulty={recipe.difficulty} cook_time={recipe.cook_time} key={index} />
+      <Recipe _id={recipe._id} name={recipe.name} img={recipe.img} difficulty={recipe.difficulty} cooktime={recipe.cooktime} key={index} />
     )
 
     return (
