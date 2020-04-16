@@ -62,10 +62,9 @@ class RecipeEdit extends Component {
       <Layout user={this.props.user}>
         <form className="form" onSubmit={this.handleSubmit}>
 
-        <div className="div-image" style={{ backgroundImage: "url(" + divImage + ")"}}>
+        <div id="div-image" style={{ backgroundImage: "url(" + divImage + ")"}}>
         </div> 
         
-        {/* <div className="form"> */}
         <div>
           <label for="input-image-link">Image Link</label>
           <input
