@@ -39,6 +39,7 @@ const Nav = ({ user }) => {
         <NavLink className="logo" to="/">
           My Recipe Book
         </NavLink>
+        {/* <img className="salad-logo" src="https://i.imgur.com/yGz0wMf.png"></img> */}
         <div className="links">
           {/* {user && <div className="link welcome">Welcome, {user.username}</div>} */}
           {/* {alwaysOptions} */}

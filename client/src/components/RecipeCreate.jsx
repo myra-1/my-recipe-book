@@ -54,7 +54,7 @@ class RecipeCreate extends Component {
     }
     return (
       <Layout user={this.props.user}>
-        <div className="title">
+        <div className="recipe-title">
           <h1>Create your own Recipe</h1>
           <img className="chef-img" src="https://i.imgur.com/7cGpFC9.png"></img>
         </div>
