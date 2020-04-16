@@ -24,6 +24,7 @@ const unauthenticatedOptions = (
     </NavLink>
   </>
 );
+
 // const alwaysOptions = (
 //   <>
 //   </>
