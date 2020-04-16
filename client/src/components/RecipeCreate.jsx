@@ -59,8 +59,8 @@ class RecipeCreate extends Component {
           <img className="chef-img" src="https://i.imgur.com/7cGpFC9.png"></img>
         </div>
         
-        <form onSubmit={this.handleSubmit}>
-          <div className="form">
+        <form className="form" onSubmit={this.handleSubmit}>
+          
             <div>
               <label for="input-image-link">Image Link</label>
               <input
@@ -161,7 +161,6 @@ class RecipeCreate extends Component {
               onChange={this.handleChange}
               />
               </div>
-            </div>
             <button type="submit" className="save-button">
               Save
             </button>
