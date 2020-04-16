@@ -78,14 +78,6 @@ class RecipeEdit extends Component {
               autoFocus
               onChange={this.handleChange}
             />
-            {/* <input
-                            className="input-price"
-                            placeholder='Price'
-                            value={recipe.price}
-                            name='price'
-                            required
-                            onChange={this.handleChange}
-                        /> */}
             <textarea
               className="textarea-description"
               rows={10}

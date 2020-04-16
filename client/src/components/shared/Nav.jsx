@@ -4,9 +4,12 @@ import { NavLink } from "react-router-dom";
 import logo from './logo.png';
 
 const authenticatedOptions = (
-        <>
-                <NavLink className="link" to="/add-recipe">
-                        Add Recipe
+  <>
+    <NavLink className="link" to="/recipes">
+      My Recipes
+    </NavLink>
+    <NavLink className="link" to="/add-recipe">
+      Add Recipe
     </NavLink>
                 <NavLink className="link" to="/sign-out">
                         Sign Out
@@ -25,33 +28,29 @@ const unauthenticatedOptions = (
         </>
 );
 
-const alwaysOptions = (
-        <>
-                <NavLink className="link" to="/recipes">
-                        Recipes
-    </NavLink>
-        </>
-);
+ 
+// const alwaysOptions = (
+//   <>
+//   </>
+// );
 
 const Nav = ({ user }) => {
-        return (
-                <nav>
-                        <div className="nav">
-                                <div className="logo">
-                                        <NavLink className="heading" to="/">
-                                                My Recipe Book
-                                </NavLink>
-                                        <img src={logo} alt="logo" />
-                                </div>
-                                <div className="links">
-                                        {user && <div className="link welcome">Welcome, {user.username}</div>}
-                                        {alwaysOptions}
-                                        {user ? authenticatedOptions : unauthenticatedOptions}
-                                </div>
-                        </div>
-                        <hr></hr>
-                </nav>
-        );
+  return (
+    <nav>
+      <div className="nav">
+        <NavLink className="logo" to="/">
+          My Recipe Book
+        </NavLink>
+            <img src={logo} alt="logo" />
+        <div className="links">
+          {/* {user && <div className="link welcome">Welcome, {user.username}</div>} */}
+          {/* {alwaysOptions} */}
+          {user ? authenticatedOptions : unauthenticatedOptions}
+        </div>
+      </div>
+      <hr></hr>
+    </nav>
+  );
 };
 
 export default Nav;
