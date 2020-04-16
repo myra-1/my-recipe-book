@@ -27,12 +27,13 @@ select {
 
 @media (max-width: 500px) {
     .recipes {
-        width: 100%;
         justify-content: space-around;
     }
     .sort-container {
-        width: 100%;
-        justify-content: center;
-        margin: 0px;
+      display: none;
+    }
+    
+    .layout-children {
+      display: unset;
     }
 }
