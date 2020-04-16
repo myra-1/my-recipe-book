@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./RecipeEdit.css";
+import "./RecipeCreateEdit.css";
 import { Redirect } from "react-router-dom";
 import Layout from "./shared/Layout";
 import { getRecipe, updateRecipe } from "../services/recipe";
@@ -66,7 +66,7 @@ class RecipeEdit extends Component {
             />
             <form onSubmit={this.handleSubmit}>
               <input
-                className="edit-input-image-link"
+                className="input-image-link"
                 placeholder="Image Link"
                 value={recipe.img}
                 name="img"

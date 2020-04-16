@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./RecipeCreate.css";
+import "./RecipeCreateEdit.css";
 import Layout from "./shared/Layout";
 import { Redirect } from "react-router-dom";
 import { createRecipe } from "../services/recipe";
@@ -55,97 +55,117 @@ class RecipeCreate extends Component {
     return (
       <Layout user={this.props.user}>
         <div className="title">
-          <h1>Create your own Recipe</h1>
+          <h2>create your own recipe</h2>
           <img className="chef-img" src="https://i.imgur.com/7cGpFC9.png"></img>
         </div>
-        <form className="create-form" onSubmit={this.handleSubmit}>
-          <input
-            className="input-name"
-            placeholder="Name"
-            value={recipe.name}
-            name="name"
-            required
-            autoFocus
-            onChange={this.handleChange}
-          />
-          <input
-            className="input-image-link"
-            placeholder="Image Link"
-            value={recipe.img}
-            name="img"
-            required
-            onChange={this.handleChange}
-          />
-          <input
-            className="input-cuisine"
-            placeholder="Cuisine"
-            value={recipe.cuisine}
-            name="cuisine"
-            required
-            onChange={this.handleChange}
-          />
-          <input
-            className="input-difficulty"
-            placeholder="Difficulty"
-            value={recipe.difficulty}
-            name="difficulty"
-            required
-            onChange={this.handleChange}
-          />
-          <input
-            className="input-course"
-            placeholder="Course"
-            value={recipe.course}
-            name="course"
-            required
-            onChange={this.handleChange}
-          />
-          <input
-            className="input-preptime"
-            placeholder="Preptime"
-            value={recipe.prep_time}
-            name="preptime"
-            required
-            onChange={this.handleChange}
-          />{" "}
-          <input
-            className="input-cooktime"
-            placeholder="Cooktime"
-            value={recipe.cook_time}
-            name="cooktime"
-            required
-            onChange={this.handleChange}
-          />
-          <input
-            className="input-serves"
-            placeholder="Serves"
-            value={recipe.serves}
-            name="serves"
-            required
-            onChange={this.handleChange}
-          />
-          <textarea
-            className="textarea-ingredients"
-            rows={5}
-            placeholder="Ingredients"
-            value={recipe.ingredients}
-            name="ingredients"
-            required
-            onChange={this.handleChange}
-          />
-          <textarea
-            className="textarea-instructions"
-            rows={10}
-            placeholder="Instruction"
-            value={recipe.instructions}
-            name="instructions"
-            required
-            onChange={this.handleChange}
-          />
-          <button type="submit" className="submit-button">
-            Submit
-          </button>
-        </form>
+        
+        <form onSubmit={this.handleSubmit}>
+          <div className="form">
+            <div>
+              <label for="input-image-link">Image Link</label>
+              <input
+                className="input-image-link"
+                value={recipe.img}
+                name="img"
+                required
+                onChange={this.handleChange}
+            />
+            </div>
+            <div>
+            <label for="input-name">Dish Name</label>
+            <input
+              className="input-name"
+              value={recipe.name}
+              name="name"
+              required
+              autoFocus
+              onChange={this.handleChange}
+              />
+            </div>
+            <div>
+            <label for="input-cuisine">Cuisine</label>
+            <input
+              className="input-cuisine"
+              value={recipe.cuisine}
+              name="cuisine"
+              required
+              autoFocus
+              onChange={this.handleChange}
+              />
+            </div>
+            <div>
+            <label for="input-difficulty">Difficulty</label>
+            <input
+              className="input-difficulty"
+              value={recipe.difficulty}
+              name="difficulty"
+              required
+              autoFocus
+              onChange={this.handleChange}
+              />
+            </div>
+            <div>
+            <label for="input-preptime">Prep Time</label>
+            <input
+              className="input-preptime"
+              value={recipe.preptime}
+              name="preptime"
+              required
+              autoFocus
+              onChange={this.handleChange}
+              />
+            </div>
+            <div>
+            <label for="input-cooktime">Cook Time</label>
+            <input
+              className="input-cooktime"
+              value={recipe.cooktime}
+              name="cooktime"
+              required
+              autoFocus
+              onChange={this.handleChange}
+              />
+            </div>
+            <div>
+            <label for="input-serves">Serves</label>
+            <input
+              className="input-serves"
+              value={recipe.serves}
+              name="serves"
+              required
+              autoFocus
+              onChange={this.handleChange}
+              />
+            </div>
+            <div>
+            <label for="textarea-ingredients">Ingredients</label>
+            <textarea
+              className="textarea-ingredients"
+              rows={10}
+              cols={78}
+              value={recipe.ingredients}
+              name="ingredients"
+              required
+              onChange={this.handleChange}
+            />
+            </div>
+            <div>
+            <label for="textarea-instructions">Instructions</label>
+            <textarea
+              className="textarea-instructions"
+              rows={10}
+              cols={78}
+              value={recipe.instructions}
+              name="instructions"
+              required
+              onChange={this.handleChange}
+              />
+              </div>
+            </div>
+            <button type="submit" className="save-button">
+              Save
+            </button>
+          </form>
       </Layout>
     );
   }

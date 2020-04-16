@@ -21,7 +21,6 @@
   width: 300px;
   height: 199px;
   justify-self: center;
-  -ms-grid-row-span: 1/2;
 }
 
 .recipe-name {
