@@ -24,7 +24,7 @@ class MyRecipes extends Component {
     const recipes = this.state.recipes.filter(recipe => (
       recipe.user_id === this.props.user._id
     )).map(((recipe, index) =>
-    <Recipe _id={recipe._id} name={recipe.name} img={recipe.img} difficulty={recipe.difficulty} cook_time={recipe.cook_time} key={index} />
+    <Recipe _id={recipe._id} name={recipe.name} img={recipe.img} difficulty={recipe.difficulty} cooktime={recipe.cooktime} key={index} />
     ))
     return (
       <Layout user={this.props.user}>

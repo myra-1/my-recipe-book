@@ -11,8 +11,15 @@ class RecipeEdit extends Component {
       recipe: {
         name: "",
         img: "",
+        cuisine: "",
+        difficulty: "",
+        course: "",
+        preptime: "",
+        cooktime: "",
+        serves: "",
         ingredients: "",
         instructions: "",
+        user_id: this.props.user._id,
       },
       updated: false,
     };
@@ -78,13 +85,68 @@ class RecipeEdit extends Component {
               autoFocus
               onChange={this.handleChange}
             />
+            <input
+              className="input-cuisine"
+              placeholder="Cuisine"
+              value={recipe.name}
+              name="cuisine"
+              required
+              autoFocus
+              onChange={this.handleChange}
+            />
+            <input
+              className="input-difficulty"
+              placeholder="Difficulty"
+              value={recipe.difficulty}
+              name="difficulty"
+              required
+              autoFocus
+              onChange={this.handleChange}
+            />
+            <input
+              className="input-preptime"
+              placeholder="Prep-time"
+              value={recipe.preptime}
+              name="preptime"
+              required
+              autoFocus
+              onChange={this.handleChange}
+            />
+            <input
+              className="input-cooktime"
+              placeholder="Cook-time"
+              value={recipe.cooktime}
+              name="cooktime"
+              required
+              autoFocus
+              onChange={this.handleChange}
+            />
+            <input
+              className="input-serves"
+              placeholder="Serves"
+              value={recipe.serves}
+              name="serves"
+              required
+              autoFocus
+              onChange={this.handleChange}
+            />
             <textarea
-              className="textarea-description"
-              rows={10}
-              cols={78}
-              placeholder="Description"
-              value={recipe.description}
-              name="description"
+              className="textarea-ingredients"
+              // rows={10}
+              // cols={78}
+              placeholder="Ingredients"
+              value={recipe.ingredients}
+              name="ingredients"
+              required
+              onChange={this.handleChange}
+            />
+            <textarea
+              className="textarea-instructions"
+              // rows={10}
+              // cols={78}
+              placeholder="Instructions"
+              value={recipe.instructions}
+              name="instructions"
               required
               onChange={this.handleChange}
             />

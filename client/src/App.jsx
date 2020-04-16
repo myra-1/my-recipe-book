@@ -44,7 +44,7 @@ class App extends Component {
           <Route exact path="/recipes" render={(props) => user ? <MyRecipes {...props} user={user} /> : <Recipes {...props} user={user} />} />
           <Route exact path="/add-recipe" render={() => user ? <RecipeCreate user={user} /> : <Redirect to='/signup' />} />
           <Route exact path="/recipes/:id/edit" render={(props) => user ? <RecipeEdit {...props} user={user} /> : <Redirect to='/' />} />
-          <Route exact path="/recipes/:id" render={(props) => <RecipeDetail {...props} history={props.history} user={user} />} />
+          <Route exact path="/recipes/:id" render={(props) => <RecipeDetail {...props} history={props.history} user={user}/>} />
         </Switch>
       </div>
     )

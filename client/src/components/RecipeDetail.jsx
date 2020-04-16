@@ -11,8 +11,15 @@ class RecipeDetail extends Component {
       recipe: {
         name: "",
         img: "",
+        cuisine: "",
+        difficulty: "",
+        course: "",
+        preptime: "",
+        cooktime: "",
+        serves: "",
         ingredients: "",
         instructions: "",
+        // user_id: this.props.user._id,
       },
     };
   }

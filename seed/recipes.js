@@ -11,8 +11,8 @@ const main = async () => {
         "https://images.unsplash.com/photo-1479388891567-3c137b61de97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
       course: "Lunch/Dinner",
       cuisine: "American",
-      prep_time: "10min",
-      cook_time: "5min",
+      preptime: "10min",
+      cooktime: "5min",
       serves: "4 people",
       difficulty: "MEDIUM",
 
@@ -31,8 +31,8 @@ const main = async () => {
         "https://images.unsplash.com/photo-1547592166-23ac45744acd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
       course: "Lunch/Dinner",
       cuisine: "American",
-      prep_time: "5min",
-      cook_time: "30min",
+      preptime: "5min",
+      cooktime: "30min",
       serves: "8 people",
       difficulty: "MEDIUM",
       ingredients:
@@ -49,8 +49,8 @@ const main = async () => {
         "https://img.sndimg.com/food/image/upload/w_555,h_416,c_fit,fl_progressive,q_95/v1/img/recipes/51/70/nwoyHKPSAWTjjpcSL5gs_scratch-pancakes-7.jpg",
       course: "Breakfast/Dessert",
       cuisine: "American",
-      prep_time: "5min",
-      cook_time: "5min",
+      preptime: "5min",
+      cooktime: "5min",
       serves: "9 6-inch pancakes",
       difficulty: "EASY",
 
