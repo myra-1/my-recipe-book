@@ -181,7 +181,7 @@ const main = async () => {
       cuisine: "Southern",
       preptime: "30min",
       cooktime: "30min",
-      serves: "10 servings",
+      serves: "7 servings",
       difficulty: "MEDIUM",
 
       ingredients:
@@ -192,9 +192,47 @@ const main = async () => {
 
       user_id: "5e9613c7156f35421c1db437",
     },
+
+    {
+      name: "Jamaican Oxtail Stew",
+      img: "https://i.imgur.com/WdbhMtD.jpg",
+      course: "Lunch/Dinner",
+      cuisine: "Caribbean",
+      preptime: "30min",
+      cooktime: "120min",
+      serves: "10 servings",
+      difficulty: "HARD",
+
+      ingredients:
+        "2 kg oxtail stew, 1 can broad beans (lima beans), 1 tbsp salt or to taste, ½ tsp black pepper, 1 tbsp sugar, 1 - 2 tbsp soya sauce msg-free, 1 tbsp worcestershire sauce msg-free, 2 tbsp ketchup, 1 tsp paprika, 1 tsp ginger powder, ½ tsp scotch bonnet pepper to taste, 1 tsp onion powder, 1 tsp garlic powder, 3 sprigs thyme, 3 stalks scallion, 1 medium onion chopped, 6 cloves garlic crushed, 1 small tomato diced, ¼ large bell pepper chopped, 6-8 pimento seeds, 1 tsp cooking oil",
+
+      instructions:
+        "In a large bowl, rinse oxtail pieces in vinegar, lime or lemon juice then drain completely. Season the oxtail with salt, black pepper, paprika, allspice, onion powder, garlic powder, ginger powder, 1 tablespoon soya sauce and worcestershire sauce. Thoroughly rub the seasoning into the oxtail by hand or using a large utensil. Prepare (cut) fresh herbs and spices (onion, garlic, thyme, tomato, scotch bonnet pepper, scallion etc.) then divide them into two portions. Add half the portion to the oxtail and rub in well. Cover and let marinate for 6 - 8 hours or move immediately to the next step. In a large skillet, heat cooking oil on medium heat. Add 1 tablespoon brown sugar, stirring quickly and thoroughly for approximately 15 seconds until sugar melts. Immediately add the seasoned oxtail and allow each side of the meat to brown for 1 - 2 minutes. Using the same bowl used to season the oxtail, add 1 tbsp ketchup and 1 cup water. Mix well. When both sides of oxtail have browned, add the ketchup mixture, stir the pot then cover and cook for 2 minutes. Next, add enough water to cover the meat. Stir the pot then cover and let cook on high heat for 2 ½ to 3 hours. Remember to stir the pot every 10 minutes. Ensure there is enough water to cover the meat, topping it up each time it runs low until fully cooked. When the oxtail stew is fully cooked (tender), add the broad beans, 1 tbsp ketchup, the second portion of chopped seasoning and 1 cup boiling water. If the oxtail stew isn't brown enough, add 1/2 to 1 tablespoon soya sauce and stir. Cover and cook on medium-high heat for a further 8-10 minutes. Check the gravy for desired consistency and taste. If the gravy is too thin, leave the pot uncovered to allow the gravy to thicken (approximately 5 minutes). OR - add 1 tsp. cornstarch diluted in 2 tablespoons water to thicken the gravy. If your sauce needs more salt, you can add a pinch more (to taste), stir the pot and let simmer for 5 minutes. Bless up and enjoy it!",
+
+      user_id: "5e9613c7156f35421c1db437",
+    },
+
+    {
+      name: "Cookie Fries",
+      img: "https://i.imgur.com/FaOJ9sN.jpg",
+      course: "Dessert",
+      cuisine: "American",
+      preptime: "10min",
+      cooktime: "15min",
+      serves: "10 servings",
+      difficulty: "EASY",
+
+      ingredients:
+        "1 (16.5-oz.) log refrigerated sugar cookie dough, 1/4 c. all-purpose flour, 1/4 c. mini chocolate chips, 1/4 c. rainbow sprinkles, 1/4 c. cinnamon sugar, 2 tbsp. granulated sugar",
+
+      instructions:
+        "Preheat oven to 350° and line two large baking sheets with parchment paper. In a large mixing bowl using your hands, combine cookie dough and flour until thoroughly incorporated. Divide dough between three medium bowls. Stir mini chocolate chips into one bowl, rainbow sprinkles into another, and cinnamon sugar into the third. Fold each mix-in into dough until combined. Roll dough out to 1/4”-thick. Using a fluted pastry cutter wheel, cut dough into 1-thick strips, then cut strips crosswise to form 4 fries. Sprinkle with granulated sugar and transfer to prepared baking sheets. Freeze 30 minutes. Bake for 12 to 15 minutes, or until cookies are starting to turn golden around the edges. Let it cool completely.",
+
+      user_id: "5e9613c7156f35421c1db437",
+    },
   ];
 
-  await Recipe.insertMany(recipes);
+  https: await Recipe.insertMany(recipes);
   console.log("Created recipes!");
 };
 
