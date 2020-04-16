@@ -73,7 +73,7 @@ class Recipes extends Component {
 
     return (
       <Layout user={this.props.user}>
-        <Search onSubmit={this.handleSubmit} value={this.state.filterValue} onChange={this.handleSearchChange} />
+        {/* <Search onSubmit={this.handleSubmit} value={this.state.filterValue} onChange={this.handleSearchChange} /> */}
         <form className="sort-container" onSubmit={this.handleSubmit}>
           <label htmlFor="sort">SORT BY:</label>
           <select className="sort" value={this.state.selectValue} onChange={this.handleSortChange}>
