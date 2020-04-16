@@ -41,6 +41,9 @@ nav {
   max-width: 35vw;
 }
 
+/* .logo {
+  font-family: "Monoton", cursive;
+} */
 /* .logo:hover {
   transform: scale(1.004);
 } */
@@ -90,3 +93,4 @@ hr {
     padding: 3px;
   }
 }
+
