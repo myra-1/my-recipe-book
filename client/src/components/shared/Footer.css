@@ -4,7 +4,7 @@
 
 
 footer {
-        height: 10px;
+        height: 50px;
         width: 97%;
         margin: 0 auto;
         text-align: right;
@@ -12,20 +12,17 @@ footer {
         
 
         
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1;
+    flex: 1; */
     /* padding: 20px; */
 }
 
-footer a {
-    text-decoration: underline;
-}
+
 .copyright {
-        display: flex;
-        margin-right: 0
-        ;
+        /* display: flex; */
+        margin: 0 auto;
 }
 h2 {
         font-size: 1em;
@@ -52,7 +49,7 @@ span:nth-child(2) {
       }
       span:nth-child(4) {
               color: white;
-        background: rgba(0, 128, 0, 0.698);
+        background: rgba(15, 110, 15, 0.829);
       }
       span:nth-child(5) {
         background: rgba(255, 0, 0, 0.603);

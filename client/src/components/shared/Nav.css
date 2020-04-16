@@ -6,7 +6,6 @@ nav {
   height: 20px;
   padding: 0;
   width: 100%;
-  background-color: white;
   z-index: 1;
   top: 0;
   left: 0;
@@ -18,33 +17,26 @@ nav {
   margin-left: -2px;
   margin-right: -2px;
   margin-top: -2px;
-  /* box-shadow: 1px 1px 1px 0.3px #cecece; */
   width: 100%;
+  background-color: white;
 }
 .nav img {
   width: 40px;
   margin-right: 300px;
-  vertical-align: sub;
 }
 .heading {
   margin-left: 20px;
   font-family: "Monoton", cursive;
   text-transform: uppercase;
+  vertical-align: super;
   height: 20px;
   letter-spacing: 2px;
-  color: #05256c;
+  color: #050f6c;
   text-align: left;
-  font-size: 24px;
+  font-size: 28px;
   flex: 1;
   max-width: 35vw;
 }
-
-/* .logo {
-  font-family: "Monoton", cursive;
-} */
-/* .logo:hover {
-  transform: scale(1.004);
-} */
 .links {
   flex: 2;
   max-width: 60vw;
