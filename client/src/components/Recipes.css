@@ -1,9 +1,12 @@
 .recipes {
     width: 90vw;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 400px);
+    /* grid-template-columns: 5% 30% 30% 30% 5%; */
+    /* display: flex;
     flex-wrap: wrap;
+    padding: 40px; */
     justify-content: space-evenly;
-    padding: 40px;
 }
 
 .sort-container {
