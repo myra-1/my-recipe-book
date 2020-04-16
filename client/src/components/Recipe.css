@@ -39,11 +39,11 @@
   text-align: center;
 }
 .cook-time {
-  background-color: lightgray;
+  background-color: rgb(243,243,243);
   margin: 0;
 }
 .difficulty {
-  background-color: lightgray;
+  background-color: rgb(243,243,243);
   grid-column-end: 3;
   margin: 0;
 }
