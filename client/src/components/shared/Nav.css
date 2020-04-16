@@ -11,7 +11,6 @@ nav {
   top: 0;
   left: 0;
 }
-
 .nav {
   display: flex;
   height: 20px;
@@ -23,28 +22,28 @@ nav {
   width: 100%;
 }
 .nav img {
-        width: 40px;
-        margin-right: 300px;
-        vertical-align: sub;
+  width: 40px;
+  margin-right: 300px;
+  vertical-align: sub;
 }
-
 .heading {
   margin-left: 20px;
-  font-family: 'Monoton', cursive;
+  font-family: "Monoton", cursive;
   text-transform: uppercase;
   height: 20px;
   letter-spacing: 2px;
-  color: #05256C;
+  color: #05256c;
   text-align: left;
   font-size: 24px;
   flex: 1;
   max-width: 35vw;
 }
-
+/* .logo {
+  font-family: "Monoton", cursive;
+} */
 /* .logo:hover {
   transform: scale(1.004);
 } */
-
 .links {
   flex: 2;
   max-width: 60vw;
@@ -53,25 +52,20 @@ nav {
   display: flex;
   margin: 20px 0 0 80px;
 }
-
 .link {
   flex: 1;
-  
 }
-
 .welcome {
   padding: 0 100px;
 }
-
 a {
   text-decoration: none;
   color: black;
 }
 hr {
-        width: 97%;
-        margin-top: 0;
+  width: 97%;
+  margin-top: 0;
 }
-
 @media (max-width: 500px) {
   nav {
     width: 98%;
