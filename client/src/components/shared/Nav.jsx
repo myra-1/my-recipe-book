@@ -1,8 +1,6 @@
 import React from "react";
 import "./Nav.css";
 import { NavLink } from "react-router-dom";
-import logo from './logo.png';
-
 const authenticatedOptions = (
   <>
     <NavLink className="link" to="/recipes">
@@ -16,7 +14,6 @@ const authenticatedOptions = (
     </NavLink>
   </>
 );
-
 const unauthenticatedOptions = (
   <>
     <NavLink className="link" to="/sign-up">
@@ -28,12 +25,10 @@ const unauthenticatedOptions = (
   </>
 );
 
-
 // const alwaysOptions = (
 //   <>
 //   </>
 // );
-
 const Nav = ({ user }) => {
   return (
     <nav>
@@ -42,7 +37,7 @@ const Nav = ({ user }) => {
           <NavLink className="heading" to="/">
             My Recipe Book
           </NavLink>
-          <img src='https://i.imgur.com/yGz0wMf.png' alt="salad bowl" />
+          <img src="https://i.imgur.com/yGz0wMf.png" alt="salad bowl" />
         </div>
         <div className="links">
           {/* {user && <div className="link welcome">Welcome, {user.username}</div>} */}
@@ -54,5 +49,4 @@ const Nav = ({ user }) => {
     </nav>
   );
 };
-
 export default Nav;
