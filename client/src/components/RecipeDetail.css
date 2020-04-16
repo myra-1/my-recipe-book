@@ -1,34 +1,111 @@
 .recipe-detail {
-    display: flex;
-    padding: 100px;
-    padding-top: 80px;
+    padding: 10px 100px;
+   
 }
 
 .detail {
     display: flex;
-    flex-direction: column;
-    line-height: 1.6;
+    /* flex-direction: column; */
+    /* line-height: 1.6; */
 }
+
+
 
 .name {
-    font-size: 64px;
-    letter-spacing: 1px;
-    padding: 5px;
+    min-width: 500px;
+    font-size: 46px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0.555);
+    border-radius: 15px;
+    margin-bottom: 10px;
+    
 }
 
-.price {
-    font-size: 28px;
+img {
+        width: 640px;
+        border-radius: 18px;
+}
+.category-container {
+        width: 500px;
+        /* display: flex; */
+        /* margin: 0; */
+        /* flex-wrap: wrap; */
+}
+.category {
+        width: 40%;
+        /* background: red; */
+        /* font-family: Montserrat; */
+        font-size: 32px;
+        font-weight: 100;
+
+}
+.course {
+
+}
+.difficulty {
+        /* background-color: red; */
+
+}
+.cuisine{
+
+}
+.preptime {
+
+}
+.cooktime {
+
+}
+.serves {
+
 }
 
-.description {
-    padding: 10px;
-    letter-spacing: .9px;
+.main {
+        font-size: 22px;
+        font-weight: 200;
+        width: 50%;
+        margin-top: 25px;
+        margin-left: 5%;
+}
+.ingredients h2 {
+        width: 200px;
+        color: black;
+        font-size: 30px;
+        background-color: rgba(255, 255, 0, 0.712);
+        font-weight: 300;
+        text-align: center;
+        margin: 20px 0 10px -30px;
+        border-radius: 10px;
+}
+.instructions h2 {
+        width: 200px;
+        color: white;
+        font-size: 30px;
+        background-color: rgba(28, 160, 39, 0.712);
+        font-weight: 300;
+        text-align: center;
+        margin: 20px 0 10px -30px;
+        border-radius: 10px;
+}
+.ingredients {
+        
+        margin-bottom: 5%;
+  
+}
+.instructions {
+
 }
 
-.recipe-detail-image {
-    width: 500px;
-    padding: 0 40px;
-}
+
+
+
+
+
+
+
+
+
 
 .button-container {
     display: flex;
