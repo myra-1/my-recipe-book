@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import './Recipes.css'
 import Recipe from './Recipe'
-import Search from './Search'
-import { AZ, ZA, lowestFirst, highestFirst } from "./Sort"
+import { AZ, ZA } from "./Sort"
 import Layout from './shared/Layout'
 import { getRecipes } from '../services/recipe'
 
@@ -48,16 +47,6 @@ class Recipes extends Component {
           recipes: ZA(recipes)
         });
         break;
-      case "price-ascending":
-        this.setState({
-          recipes: lowestFirst(recipes)
-        });
-        break;
-      case "price-descending":
-        this.setState({
-          recipes: highestFirst(recipes)
-        });
-        break;
       default:
         break
     }
@@ -73,14 +62,13 @@ class Recipes extends Component {
 
     return (
       <Layout user={this.props.user}>
-        {/* <Search onSubmit={this.handleSubmit} value={this.state.filterValue} onChange={this.handleSearchChange} /> */}
+        
         <form className="sort-container" onSubmit={this.handleSubmit}>
           <label htmlFor="sort">SORT BY:</label>
           <select className="sort" value={this.state.selectValue} onChange={this.handleSortChange}>
             <option className="option" value="name-ascending" >&nbsp; Alphabetically, A-Z &nbsp;</option>
             <option value="name-descending">&nbsp; Alphabetically, Z-A &nbsp;</option>
-            {/* <option value="price-ascending">&nbsp; Price, low to high &nbsp;</option>
-            <option value="price-descending">&nbsp; Price, high to low &nbsp;</option> */}
+            
           </select>
         </form>
         <div className="recipes">

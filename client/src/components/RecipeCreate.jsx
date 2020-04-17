@@ -26,10 +26,6 @@ class RecipeCreate extends Component {
     };
   }
 
-  // componentDidMount = async () => {
-  //   this.setState({ recipe: { user_id: this.props.user._id } } || { recipe: { user_id: this.props.user.user.id } });
-  // };
-
   handleChange = (event) => {
     const { name, value } = event.target;
     this.setState({

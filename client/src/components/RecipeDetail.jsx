@@ -21,7 +21,7 @@ class RecipeDetail extends Component {
                                 serves: "",
                                 ingredients: "",
                                 instructions: "",
-                                // user_id: this.props.user._id,
+                              
                         },
                 };
         }

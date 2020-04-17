@@ -18,8 +18,6 @@
   }
   .layout-children {
     width: 100vw;
-
-    /* flex: 4; */
     padding: 0px;
     margin: 0px;
     display: flex;

@@ -9,7 +9,6 @@ router.get('/recipes', controllers.getRecipes);
 router.post("/sign-up", controllers.signUp);
 router.post("/sign-in", controllers.signIn);
 router.get("/verify", controllers.verifyUser);
-router.post("/change-password", controllers.changePassword);
 router.get('/recipes/:id', controllers.getRecipe);
 router.post('/recipes', controllers.createRecipe);
 router.put('/recipes/:id', restrict, controllers.updateRecipe);

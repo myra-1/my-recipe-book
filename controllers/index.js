@@ -65,7 +65,7 @@ const verifyUser = (req, res) => {
   }
 };
 
-const changePassword = async (req, res) => {};
+
 
 const getRecipes = async (req, res) => {
   try {
@@ -136,7 +136,6 @@ module.exports = {
   signUp,
   signIn,
   verifyUser,
-  changePassword,
   createRecipe,
   getRecipes,
   getRecipe,
