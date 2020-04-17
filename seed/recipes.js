@@ -13,7 +13,7 @@ const main = async () => {
       cuisine: "American",
       preptime: "10min",
       cooktime: "5min",
-      serves: "4 people",
+      serves: "1 serving",
       difficulty: "MEDIUM",
 
       ingredients:
@@ -33,7 +33,7 @@ const main = async () => {
       cuisine: "American",
       preptime: "5min",
       cooktime: "30min",
-      serves: "8 people",
+      serves: "1 serving",
       difficulty: "MEDIUM",
       ingredients:
         "1/4 cup (1/2 stick) unsalted butter, 10 sprigs thyme, tied together, 1 medium onion, thinly sliced, 2 garlic cloves, thinly sliced, 1/4 cup tomato paste, 2 28-oz. cans whole tomatoes, 1–2 tsp sugar, divided, 1/4 cup (or more) heavy cream, kosher salt and freshly ground black pepper",
@@ -181,7 +181,7 @@ const main = async () => {
       cuisine: "Southern",
       preptime: "30min",
       cooktime: "30min",
-      serves: "7 servings",
+      serves: "5 servings",
       difficulty: "MEDIUM",
 
       ingredients:
@@ -200,7 +200,7 @@ const main = async () => {
       cuisine: "Caribbean",
       preptime: "30min",
       cooktime: "120min",
-      serves: "10 servings",
+      serves: "1 serving",
       difficulty: "HARD",
 
       ingredients:

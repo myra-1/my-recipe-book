@@ -61,20 +61,38 @@ hr {
 }
 @media (max-width: 500px) {
   nav {
-    width: 98%;
+    height: 100px;
+    background-color: white;
+    padding-bottom: 10px;
   }
+  hr {
+    display: none;
+  }
+  .links a {
+    text-align: center;
+    color: #050f6c;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0 5px;
+  }
+  .nav {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: white;
+  }
+
   .logo {
-    max-width: 50%;
+    text-align: center;
   }
-  .links {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 50vw;
+  .salad-bowl {
+    display: none;
   }
-  .link {
-    padding: 3px;
+
+  .layout-children {
+    margin-top: 100px;
+  }
+
+  .heading {
+    font-size: 14px;
   }
 }
-

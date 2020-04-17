@@ -37,7 +37,11 @@ const Nav = ({ user }) => {
           <NavLink className="heading" to="/">
             My Recipe Book
           </NavLink>
-          <img src="https://i.imgur.com/yGz0wMf.png" alt="salad bowl" />
+          <img
+            className="salad-bowl"
+            src="https://i.imgur.com/yGz0wMf.png"
+            alt="salad bowl"
+          />
         </div>
         <div className="links">
           {/* {user && <div className="link welcome">Welcome, {user.username}</div>} */}
