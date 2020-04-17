@@ -20,14 +20,14 @@ class RecipeCreate extends Component {
         serves: "",
         ingredients: "",
         instructions: "",
-        user_id: this.props.user._id,
+        user_id: this.props.user._id || this.props.user.user.id
       },
       created: false,
     };
   }
 
   componentDidMount = async () => {
-    this.setState({ recipe: { user_id: this.props.user._id } });
+    this.setState({ recipe: { user_id: this.props.user._id } } || { recipe: { user_id: this.props.user.user.id } });
   };
 
   handleChange = (event) => {
@@ -58,20 +58,20 @@ class RecipeCreate extends Component {
           <h2>create your own recipe</h2>
           <img className="chef-img" src="https://i.imgur.com/7cGpFC9.png"></img>
         </div>
-        
+
         <form className="form" onSubmit={this.handleSubmit}>
-          
-            <div>
-              <label for="input-image-link">Image Link</label>
-              <input
-                className="input-image-link"
-                value={recipe.img}
-                name="img"
-                required
-                onChange={this.handleChange}
+
+          <div>
+            <label for="input-image-link">Image Link</label>
+            <input
+              className="input-image-link"
+              value={recipe.img}
+              name="img"
+              required
+              onChange={this.handleChange}
             />
-            </div>
-            <div>
+          </div>
+          <div>
             <label for="input-name">Dish Name</label>
             <input
               className="input-name"
@@ -80,9 +80,9 @@ class RecipeCreate extends Component {
               required
               autoFocus
               onChange={this.handleChange}
-              />
-            </div>
-            <div>
+            />
+          </div>
+          <div>
             <label for="input-cuisine">Cuisine</label>
             <input
               className="input-cuisine"
@@ -91,9 +91,9 @@ class RecipeCreate extends Component {
               required
               autoFocus
               onChange={this.handleChange}
-              />
-            </div>
-            <div>
+            />
+          </div>
+          <div>
             <label for="input-difficulty">Difficulty</label>
             <input
               className="input-difficulty"
@@ -102,9 +102,9 @@ class RecipeCreate extends Component {
               required
               autoFocus
               onChange={this.handleChange}
-              />
-            </div>
-            <div>
+            />
+          </div>
+          <div>
             <label for="input-preptime">Prep Time</label>
             <input
               className="input-preptime"
@@ -113,9 +113,9 @@ class RecipeCreate extends Component {
               required
               autoFocus
               onChange={this.handleChange}
-              />
-            </div>
-            <div>
+            />
+          </div>
+          <div>
             <label for="input-cooktime">Cook Time</label>
             <input
               className="input-cooktime"
@@ -124,9 +124,9 @@ class RecipeCreate extends Component {
               required
               autoFocus
               onChange={this.handleChange}
-              />
-            </div>
-            <div>
+            />
+          </div>
+          <div>
             <label for="input-serves">Serves</label>
             <input
               className="input-serves"
@@ -135,9 +135,9 @@ class RecipeCreate extends Component {
               required
               autoFocus
               onChange={this.handleChange}
-              />
-            </div>
-            <div>
+            />
+          </div>
+          <div>
             <label for="textarea-ingredients">Ingredients</label>
             <textarea
               className="textarea-ingredients"
@@ -148,8 +148,8 @@ class RecipeCreate extends Component {
               required
               onChange={this.handleChange}
             />
-            </div>
-            <div>
+          </div>
+          <div>
             <label for="textarea-instructions">Instructions</label>
             <textarea
               className="textarea-instructions"
@@ -159,12 +159,12 @@ class RecipeCreate extends Component {
               name="instructions"
               required
               onChange={this.handleChange}
-              />
-              </div>
-            <button type="submit" className="save-button">
-              Save
+            />
+          </div>
+          <button type="submit" className="save-button">
+            Save
             </button>
-          </form>
+        </form>
       </Layout>
     );
   }
