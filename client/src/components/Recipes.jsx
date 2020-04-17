@@ -19,6 +19,7 @@ class Recipes extends Component {
 
   async componentDidMount() {
     const recipes = await getRecipes()
+    console.log(recipes)
     this.setState({ recipes })
   }
 
@@ -67,12 +68,12 @@ class Recipes extends Component {
   render() {
     const recipes = this.state.filteredRecipes ? this.state.filteredRecipes : this.state.recipes
     const RECIPES = recipes.map((recipe, index) =>
-      <Recipe _id={recipe._id} name={recipe.name} img={recipe.img} difficulty={recipe.difficulty} cook_time={recipe.cook_time} key={index} />
+      <Recipe _id={recipe._id} name={recipe.name} img={recipe.img} difficulty={recipe.difficulty} cooktime={recipe.cooktime} key={index} />
     )
 
     return (
       <Layout user={this.props.user}>
-        <Search onSubmit={this.handleSubmit} value={this.state.filterValue} onChange={this.handleSearchChange} />
+        {/* <Search onSubmit={this.handleSubmit} value={this.state.filterValue} onChange={this.handleSearchChange} /> */}
         <form className="sort-container" onSubmit={this.handleSubmit}>
           <label htmlFor="sort">SORT BY:</label>
           <select className="sort" value={this.state.selectValue} onChange={this.handleSortChange}>
@@ -83,7 +84,7 @@ class Recipes extends Component {
           </select>
         </form>
         <div className="recipes">
-          { RECIPES }
+          {RECIPES}
         </div>
       </Layout>
     )

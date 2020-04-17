@@ -1,11 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Kalam&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+
+
+
 footer {
-    display: flex;
+        height: 50px;
+        width: 97%;
+        margin: 0 auto;
+        text-align: right;
+        border-top: 1px solid rgba(128, 128, 128, 0.185);
+        
+
+        
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1;
-    padding: 20px;
+    flex: 1; */
+    /* padding: 20px; */
 }
 
-footer a {
-    text-decoration: underline;
+
+.copyright {
+        /* display: flex; */
+        margin: 0 auto;
 }
+h2 {
+        font-size: 1em;
+        font-weight: 300;
+        word-spacing: -4px;
+        text-transform: lowercase;
+        color: white;
+        /* margin-right: 2%;
+        margin-top: 2%; */
+        /* opacity: .6; */
+}
+
+span:nth-child(1) {
+        color: black;
+        background: rgba(255, 255, 0, 0.651);
+        padding: 4px;
+        border-radius: 7px;
+      }
+span:nth-child(2) {
+        background: rgba(250, 0, 0, 0.657);
+        padding: 6px;
+        border-radius: 7px;
+      }
+      span:nth-child(3) {
+        background: rgba(14, 17, 170, 0.582);
+        padding: 3px;
+        border-radius: 7px;
+      }
+      span:nth-child(4) {
+              color: white;
+        background: rgba(15, 110, 15, 0.829);
+        padding: 5px;
+        border-radius: 7px;
+      }
+      span:nth-child(5) {
+        background: rgba(255, 0, 0, 0.603);
+        padding: 3px;
+        border-radius: 7px;
+      }
+      

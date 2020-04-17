@@ -1,9 +1,8 @@
 .recipes {
     width: 90vw;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 400px);
     justify-content: space-evenly;
-    padding: 40px;
 }
 
 .sort-container {
@@ -28,12 +27,13 @@ select {
 
 @media (max-width: 500px) {
     .recipes {
-        width: 100%;
         justify-content: space-around;
     }
     .sort-container {
-        width: 100%;
-        justify-content: center;
-        margin: 0px;
+      display: none;
+    }
+    
+    .layout-children {
+      display: unset;
     }
 }

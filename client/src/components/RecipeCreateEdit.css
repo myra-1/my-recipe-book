@@ -1,0 +1,117 @@
+.title {
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title img {
+  width: 100px;
+}
+
+.title h2 {
+  font-size: 38px;
+  margin-right: 10px;
+  text-transform: uppercase;
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+.form {
+  max-width: 80vw;
+  padding: 20px;
+}
+
+.form div {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#div-image {
+  max-width: 80vw;
+  margin-left: 32%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 30vh; 
+  border-radius: 7px;
+}
+
+
+label {
+  font-size: .85em;
+  margin-left: 10px;
+}
+
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+input,
+textarea {
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 66vw;
+  border: 0.5px solid grey;
+  border-radius: 7px;
+  box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.12);
+  padding: 2px;
+  font-size: 18px;
+  color: grey;
+}
+
+button {
+  margin-left: 50%;
+}
+
+@media (max-width: 500px) {
+
+  .title {
+    margin-top: 100px;
+  }
+  .title img {
+    display: none;
+  }
+  
+  .title h2 {
+    font-size: 24px;
+    margin-right: 0;
+    font-weight: 700;
+  }
+
+  .form {
+    margin-top: 60px;
+    max-width: 100%;
+  }
+
+  .form div {
+    margin-bottom: 5px;
+    justify-content: center;
+  }
+
+  #div-image {
+    background-size: cover;
+    max-width: 100vw;
+    margin-left: 0;
+  }
+
+  textarea, input {
+    width: 100%;
+    padding: 0px;
+    font-size: 18px;
+  }
+
+  label {
+    color: gray;
+  }
+
+  button {
+    margin-left: 75%;
+  }
+}

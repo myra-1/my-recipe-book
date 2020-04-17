@@ -1,9 +1,11 @@
 import React from "react";
 import "./Nav.css";
 import { NavLink } from "react-router-dom";
-
 const authenticatedOptions = (
   <>
+    <NavLink className="link" to="/recipes">
+      My Recipes
+    </NavLink>
     <NavLink className="link" to="/add-recipe">
       Add Recipe
     </NavLink>
@@ -12,7 +14,6 @@ const authenticatedOptions = (
     </NavLink>
   </>
 );
-
 const unauthenticatedOptions = (
   <>
     <NavLink className="link" to="/sign-up">
@@ -24,29 +25,32 @@ const unauthenticatedOptions = (
   </>
 );
 
-const alwaysOptions = (
-  <>
-    <NavLink className="link" to="/recipes">
-      Recipes
-    </NavLink>
-  </>
-);
-
+// const alwaysOptions = (
+//   <>
+//   </>
+// );
 const Nav = ({ user }) => {
   return (
     <nav>
       <div className="nav">
-        <NavLink className="logo" to="/">
-          My Recipe Book
-        </NavLink>
+        <div className="logo">
+          <NavLink className="heading" to="/">
+            My Recipe Book
+          </NavLink>
+          <img
+            className="salad-bowl"
+            src="https://i.imgur.com/yGz0wMf.png"
+            alt="salad bowl"
+          />
+        </div>
         <div className="links">
-          {user && <div className="link welcome">Welcome, {user.username}</div>}
-          {alwaysOptions}
+          {/* {user && <div className="link welcome">Welcome, {user.username}</div>} */}
+          {/* {alwaysOptions} */}
           {user ? authenticatedOptions : unauthenticatedOptions}
         </div>
       </div>
+      <hr></hr>
     </nav>
   );
 };
-
 export default Nav;
