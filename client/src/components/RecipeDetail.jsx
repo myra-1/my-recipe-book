@@ -57,16 +57,16 @@ class RecipeDetail extends Component {
                                                                         <div className="category serves">{recipe.serves}</div>
                                                                 </div>
                                                                 <div class="edit-container">
-                                                                        {/* {user && recipe.user_id === user._id ? */}
+                                                                        {user && recipe.user_id === user._id ?
                                                                                 <div className="button-container">
                                                                                         <button className="edit-button">
                                                                                                 <Link className="edit-link" to={`/recipes/${recipe._id}/edit`}>Edit</Link>
                                                                                         </button>
                                                                                         <button className="delete-button" onClick={() => this.handleDelete(recipe._id)}>Delete</button>
                                                                                 </div>
-                                                                                {/* : */}
-                                                                                {/* <></> */}
-                                                                        {/* } */}
+                                                                                :
+                                                                                <></>
+                                                                        }
                                                                 </div>
                                                         </div>
                                                 </div>
