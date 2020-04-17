@@ -42,16 +42,32 @@ class RecipeDetail extends Component {
                         <Layout user={this.props.user}>
                                 <div className="recipe-detail">
                                         <div className="detail">
-                                                <div className="aside">
-                                                        <div className="name">{recipe.name}</div>
-                                                        <img className="img" src={recipe.img} />
-                                                        <div className="category-container">
-                                                                <div className="category course">{recipe.course}</div>
-                                                                <div className="category difficulty">{recipe.difficulty}</div>
-                                                                <div className="category cuisine">{recipe.cuisine}</div>
-                                                                <div className="category preptime">{recipe.preptime}</div>
-                                                                <div className="category cooktime">{recipe.cooktime}</div>
-                                                                <div className="category serves">{recipe.serves}</div>
+                                                <div class="aside">
+                                                        <div className="aside-top">
+                                                                <div className="name">{recipe.name}</div>
+                                                                <img className="img" src={recipe.img} />
+                                                        </div>
+                                                        <div class="aside-bottom">
+                                                                <div className="category-container">
+                                                                        <div className="category course">{recipe.course}</div>
+                                                                        <div className="category difficulty">{recipe.difficulty}</div>
+                                                                        <div className="category cuisine">{recipe.cuisine}</div>
+                                                                        <div className="category preptime">{recipe.preptime}</div>
+                                                                        <div className="category cooktime">{recipe.cooktime}</div>
+                                                                        <div className="category serves">{recipe.serves}</div>
+                                                                </div>
+                                                                <div class="edit-container">
+                                                                        {/* {user && recipe.user_id === user._id ? */}
+                                                                                <div className="button-container">
+                                                                                        <button className="edit-button">
+                                                                                                <Link className="edit-link" to={`/recipes/${recipe._id}/edit`}>Edit</Link>
+                                                                                        </button>
+                                                                                        <button className="delete-button" onClick={() => this.handleDelete(recipe._id)}>Delete</button>
+                                                                                </div>
+                                                                                {/* : */}
+                                                                                {/* <></> */}
+                                                                        {/* } */}
+                                                                </div>
                                                         </div>
                                                 </div>
                                                 <div className="main">
@@ -67,23 +83,7 @@ class RecipeDetail extends Component {
                                                                 {recipe.instructions}
                                                         </div>
                                                 </div>
-                                                {user && recipe.user_id === user._id ?
-                                                        <div className="button-container">
-                                                                <button className="edit-button">
-                                                                        <Link className="edit-link" to={`/recipes/${recipe._id}/edit`}>
-                                                                                Edit
-                </Link>
-                                                                </button>
-                                                                <button
-                                                                        className="delete-button"
-                                                                        onClick={() => this.handleDelete(recipe._id)}
-                                                                >
-                                                                        Delete
-              </button>
-                                                        </div>
-                                                        :
-                                                        <></>
-                                                }
+
                                         </div>
                                 </div>
                         </Layout>

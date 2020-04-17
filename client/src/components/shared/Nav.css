@@ -34,6 +34,7 @@ nav {
   color: #050f6c;
   text-align: left;
   font-size: 28px;
+  /* background-color: red; */
   flex: 1;
   max-width: 35vw;
 }

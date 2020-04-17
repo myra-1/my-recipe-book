@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Kalam&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+
 .recipe-detail {
     padding: 10px 100px;
    
@@ -14,10 +17,11 @@
 .name {
     min-width: 500px;
     font-size: 46px;
-    font-weight: 500;
-    color: white;
-    text-align: center;
-    background-color: rgba(255, 0, 0, 0.555);
+    font-weight: 400;
+    /* text-transform: uppercase; */
+    color: black;
+    /* text-align: center; */
+    /* background-color: rgba(22, 34, 202, 0.349); */
     border-radius: 15px;
     margin-bottom: 10px;
     
@@ -27,37 +31,78 @@ img {
         width: 640px;
         border-radius: 18px;
 }
+.aside-bottom {
+        display: flex;
+        justify-content: space-between ;
+}
 .category-container {
-        width: 500px;
         /* display: flex; */
-        /* margin: 0; */
+        margin-right: 0;
         /* flex-wrap: wrap; */
 }
 .category {
-        width: 40%;
-        /* background: red; */
-        /* font-family: Montserrat; */
+        width: 20%;
+        margin: 0px; 
         font-size: 32px;
         font-weight: 100;
-
 }
 .course {
+        margin: 0;
 
 }
 .difficulty {
-        /* background-color: red; */
-
+        margin: 0;
 }
 .cuisine{
-
+        margin: 0;
 }
 .preptime {
-
+        margin: 0;
 }
 .cooktime {
-
+        margin: 0;
 }
 .serves {
+        margin: 0;
+}
+/* //////// Buttons ///////////// */
+.edit-container {
+        width: 50%;
+        /* background-color: red; */
+}
+.button-container {
+        width: 100%;
+        margin-top: 2%;
+        margin-left: 80px;
+        display: flex;
+        /* justify-content: space-between; */
+}
+.delete-button {
+        height: 70px;
+        width: 120px;
+        margin: 0;
+        padding: 5px;
+        box-shadow: none;
+        background-color: rgba(255, 0, 0, 0.561);
+        border-radius: 10px;
+        border: none;
+        font-size: 25px;
+        font-weight: 100;
+        text-transform: lowercase;
+}
+.edit-button {
+        height: 70px;
+        width: 120px;
+        margin: 0;
+        font-size: 25px;
+        font-weight: 100;
+        text-transform: lowercase;
+        background-color: rgba(187, 187, 189, 0.561);
+        border-radius: 10px;
+        border: none;
+        padding: 5px;
+        box-shadow: none;
+        
 
 }
 
@@ -99,15 +144,7 @@ img {
 
 
 
-
-
-
-
-
-
-
-
-.button-container {
+/* .button-container {
     display: flex;
     justify-content: space-evenly;
 }
@@ -129,7 +166,7 @@ img {
 
 .edit-link {
     color: white;
-}
+} */
 
 @media (max-width: 1024px) {
     .name {
