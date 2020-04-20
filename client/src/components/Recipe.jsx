@@ -9,7 +9,7 @@ const Recipe = (props) => {
         <div className="recipe-name">{props.name}</div>
         <div className="cook-diff-div">
           <p className="cook-time">{props.cooktime}</p>
-          <p className="difficulty">{props.difficulty}</p>
+          <p className="difficulty1">{props.difficulty}</p>
         </div>
       </Link>
     </>

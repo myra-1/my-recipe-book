@@ -42,10 +42,11 @@
   background-color: rgb(243,243,243);
   margin: 0;
 }
-.difficulty {
+.difficulty1 {
   background-color: rgb(243,243,243);
   grid-column-end: 3;
   margin: 0;
+  text-transform: uppercase;
 }
 
 @media only screen and (max-width: 500px){

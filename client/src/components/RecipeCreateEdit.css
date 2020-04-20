@@ -1,42 +1,36 @@
-.title {
-  text-align: center;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@import url("https://fonts.googleapis.com/css?family=Kalam&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
 
-.title img {
-  width: 100px;
+.title {
+  margin-bottom: 0px;
 }
 
 .title h2 {
-  font-size: 38px;
-  margin-right: 10px;
-  text-transform: uppercase;
+  font-size: 36px;
+  text-transform: capitalize;
   color: black;
-  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin-left: 18px;
 }
 
 .form {
   max-width: 80vw;
   padding: 20px;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-column-gap: 25px;
 }
 
 .form div {
   margin-bottom: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 #div-image {
-  max-width: 80vw;
-  margin-left: 32%;
+  max-width: 20vw;
+  margin-left: 25%;
   background-size: contain;
   background-repeat: no-repeat;
-  height: 30vh; 
+  height: 20vh; 
   border-radius: 7px;
 }
 
@@ -44,6 +38,8 @@
 label {
   font-size: .85em;
   margin-left: 10px;
+  font-family: 'Montserrat';
+  font-weight: 400;
 }
 
 
@@ -55,20 +51,48 @@ select:focus {
 
 input,
 textarea {
+  font-family: 'Montserrat';
   font-size: 24px;
-  font-family: Arial, Helvetica, sans-serif;
-  width: 66vw;
-  border: 0.5px solid grey;
-  border-radius: 7px;
-  box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.12);
+  border: 0.5px solid lightgrey;
+  border-radius: 5px;
   padding: 2px;
   font-size: 18px;
   color: grey;
 }
 
-button {
-  margin-left: 50%;
+.save-button {
+  transition: all 0.3s ease;
+  height: 45px;
+  width: 90px;
+  /* margin-left: 50%; */
+  font-size: 25px;
+  font-weight: 100;
+  text-transform: lowercase;
+  background-color: rgba(187, 187, 189, 0.561);
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+  box-shadow: none;
+  justify-self: center;
 }
+em {
+  color: red;
+}
+
+.recipe-items-div {
+  padding-top: 3.5px;
+
+}
+
+.form-recipe-item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/* .ingredients-and-instruction-div {
+  grid-column: 2 / span 1;
+} */
 
 @media (max-width: 500px) {
 
