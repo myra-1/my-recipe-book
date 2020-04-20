@@ -3,7 +3,7 @@ import "./RecipeCreateEdit.css";
 import Layout from "./shared/Layout";
 import { Redirect } from "react-router-dom";
 import { createRecipe } from "../services/recipe";
-import { verifyUser } from "../services/user";
+
 
 class RecipeCreate extends Component {
   constructor(props) {
@@ -25,10 +25,6 @@ class RecipeCreate extends Component {
       created: false,
     };
   }
-
-  componentDidMount = async () => {
-    this.setState({ recipe: { user_id: this.props.user._id } } || { recipe: { user_id: this.props.user.user.id } });
-  };
 
   handleChange = (event) => {
     const { name, value } = event.target;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
-import Home from './components/Home'
+// import Home from './components/Home'
 import Recipes from './components/Recipes'
 import RecipeCreate from './components/RecipeCreate'
 import RecipeEdit from './components/RecipeEdit'

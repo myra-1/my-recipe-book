@@ -165,7 +165,6 @@ class RecipeEdit extends Component {
           onChange={this.handleChange}
           />
           </div>
-        {/* </div> */}
         <button type="submit" className="save-button">
           Save
         </button>

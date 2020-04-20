@@ -31,11 +31,9 @@ nav {
   vertical-align: super;
   height: 20px;
   letter-spacing: 2px;
-  color: #05256c;
-  opacity: 72%;
-  text-align: center;
-  font-weight: bold;
-  font-size: 18px;
+  color: #050f6c;
+  text-align: left;
+  font-size: 28px;
   flex: 1;
   max-width: 35vw;
 }

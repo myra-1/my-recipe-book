@@ -25,10 +25,6 @@ const unauthenticatedOptions = (
   </>
 );
 
-// const alwaysOptions = (
-//   <>
-//   </>
-// );
 const Nav = ({ user }) => {
   return (
     <nav>
@@ -44,8 +40,6 @@ const Nav = ({ user }) => {
           />
         </div>
         <div className="links">
-          {/* {user && <div className="link welcome">Welcome, {user.username}</div>} */}
-          {/* {alwaysOptions} */}
           {user ? authenticatedOptions : unauthenticatedOptions}
         </div>
       </div>
