@@ -24,12 +24,11 @@ class Recipes extends Component {
   }
 
   handleSearchChange = event => {
-    // const filteredKeys = Object.keys(recipes).filter(key => {
-    //   return key.includes("name" || "cuisine")
-    // })
+    
     const filter = () => {
       const filteredRecipes = this.state.recipes.filter(recipe => {
-        return recipe.name.toLowerCase().includes(this.state.filterValue.toLowerCase())
+        return recipe.cuisine.toLowerCase().includes(this.state.filterValue.toLowerCase()) ||
+        recipe.name.toLowerCase().includes(this.state.filterValue.toLowerCase())
       })
       this.setState({ filteredRecipes })
     }
@@ -72,7 +71,7 @@ class Recipes extends Component {
           <select className="sort" value={this.state.selectValue} onChange={this.handleSortChange}>
             <option className="option" value="name-ascending" >&nbsp; Alphabetically, A-Z &nbsp;</option>
             <option value="name-descending">&nbsp; Alphabetically, Z-A &nbsp;</option>
-            
+
           </select>
         </form>
         <div className="recipes">
