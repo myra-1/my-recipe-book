@@ -72,7 +72,7 @@ class Recipes extends Component {
           <select className="sort" value={this.state.selectValue} onChange={this.handleSortChange}>
             <option className="option" value="name-ascending" >&nbsp; Alphabetically, A-Z &nbsp;</option>
             <option value="name-descending">&nbsp; Alphabetically, Z-A &nbsp;</option>
-            
+
           </select>
         </form>
         <div className="recipes">
