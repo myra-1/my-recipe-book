@@ -4,6 +4,8 @@ import Recipe from './Recipe'
 import { AZ, ZA } from "./Sort"
 import Layout from './shared/Layout'
 import { getRecipes } from '../services/recipe'
+import Search from './Search'
+
 
 class Recipes extends Component {
   constructor() {
@@ -11,23 +13,25 @@ class Recipes extends Component {
     this.state = {
       recipes: [],
       filterValue: '',
-      filteredrecipes: null,
+      filteredRecipes: null,
       selectValue: 'Featured'
     }
   }
 
   async componentDidMount() {
     const recipes = await getRecipes()
-    console.log(recipes)
     this.setState({ recipes })
   }
 
   handleSearchChange = event => {
+    // const filteredKeys = Object.keys(recipes).filter(key => {
+    //   return key.includes("name" || "cuisine")
+    // })
     const filter = () => {
-      const filteredrecipes = this.state.recipes.filter(recipe => {
+      const filteredRecipes = this.state.recipes.filter(recipe => {
         return recipe.name.toLowerCase().includes(this.state.filterValue.toLowerCase())
       })
-      this.setState({ filteredrecipes })
+      this.setState({ filteredRecipes })
     }
     this.setState({ filterValue: event.target.value }, filter)
   }
@@ -62,7 +66,7 @@ class Recipes extends Component {
 
     return (
       <Layout user={this.props.user}>
-        
+        <Search onSubmit={this.handleSubmit} value={this.state.filterValue} onChange={this.handleSearchChange} />
         <form className="sort-container" onSubmit={this.handleSubmit}>
           <label htmlFor="sort">SORT BY:</label>
           <select className="sort" value={this.state.selectValue} onChange={this.handleSortChange}>
