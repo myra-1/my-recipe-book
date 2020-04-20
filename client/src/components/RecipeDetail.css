@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Kalam&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
 
-.recipe-detail {
+.recipe-detail-page {
     padding: 10px 100px;
    
 }
@@ -132,13 +132,16 @@ img {
   
 }
 
-
 @media (max-width: 500px) {
         body {
-                width: 500px;
+                max-width: 100%;
         }
-        .recipe-detail {
+        .aside {
+          padding: 5%;
+        }
+        .recipe-detail-page {
                 padding: 10px 20px;
+                width: 100%;
                
             }
             .detail {
@@ -151,24 +154,26 @@ img {
         .main {
                 font-size: 22px;
                 font-weight: 200;
-                width: 90%;
-                margin-top: 25px;
-                margin-left: 5%;
+                width: 80%;
+                margin-top: 0;
+                padding-left: 5%;
+        }
+        .category-container{
+          padding: 5%;
         }
         .edit-container {
                 width: 100%;
         }
         .button-container {
-                width: 100%;
-                margin-top: 2%;
-                margin-left: 110px;
                 display: flex;
+                flex-direction: column;
+                margin:0;
+                align-items: center;
         }
         .delete-button {
-                height: 70px;
-                width: 120px;
-                margin: 0;
-                padding: 5px;
+                height: 50px;
+                width: 95px;
+                margin: 10px;
                 box-shadow: none;
                 background-color: rgba(255, 0, 0, 0.561);
                 border-radius: 10px;
@@ -178,16 +183,15 @@ img {
                 text-transform: lowercase;
         }
         .edit-button {
-                height: 70px;
-                width: 120px;
-                margin: 0;
+                height: 50px;
+                width: 95px;
+                margin: 10px;
                 font-size: 25px;
                 font-weight: 100;
                 text-transform: lowercase;
                 background-color: rgba(187, 187, 189, 0.561);
                 border-radius: 10px;
                 border: none;
-                padding: 5px;
                 box-shadow: none;
         }
 }

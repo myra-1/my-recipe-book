@@ -42,7 +42,7 @@ class RecipeDetail extends Component {
     const { user } = this.props
     return (
       <Layout user={this.props.user}>
-        <div className="recipe-detail">
+        <div className="recipe-detail-page">
           <div className="detail">
             <div class="aside">
               <div className="aside-top">
