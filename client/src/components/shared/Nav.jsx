@@ -31,7 +31,7 @@ const Nav = ({ user }) => {
       <div className="nav">
         <div className="logo">
           <NavLink className="heading" to="/">
-            My Recipe Book
+            <span>My</span><span>Recipe</span><span>Book</span>
           </NavLink>
           <img
             className="salad-bowl"
@@ -43,7 +43,6 @@ const Nav = ({ user }) => {
           {user ? authenticatedOptions : unauthenticatedOptions}
         </div>
       </div>
-      <hr></hr>
     </nav>
   );
 };
