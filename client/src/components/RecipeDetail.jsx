@@ -76,13 +76,13 @@ class RecipeDetail extends Component {
 
                                                         <div className="ingredients">
                                                                 <h2>Ingredients:</h2>
-                                                                <div dangerouslySetInnerHTML={{ __html: `${recipe.ingredients.replace(/(\,\s+)/g,"<br />")}`}}></div>
+                                                                {recipe.ingredients}
 
                                                         </div>
 
                                                         <div className="instructions">
                                                                 <h2>Instructions:</h2>
-                                                               <div dangerouslySetInnerHTML={{ __html: `${recipe.instructions.replace(/(\.\s+)/g,"\$1<br />")}`}}></div>
+                                                                {recipe.instructions}
                                                         </div>
                                                 </div>
 
@@ -94,4 +94,3 @@ class RecipeDetail extends Component {
 }
 
 export default RecipeDetail;
-
