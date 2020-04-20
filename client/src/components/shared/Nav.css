@@ -26,7 +26,6 @@ nav {
 }
 .heading {
   margin-left: 20px;
-  font-family: "Monoton", cursive;
   text-transform: uppercase;
   vertical-align: super;
   height: 20px;
@@ -37,6 +36,24 @@ nav {
   flex: 1;
   max-width: 35vw;
 }
+span:nth-child(1) {
+        background: rgba(250, 0, 0, 0.657);
+        padding: 6px;
+        border-radius: 7px;
+      }
+
+      span:nth-child(2) {
+        background: rgba(14, 17, 170, 0.582);
+        padding: 3px;
+        border-radius: 7px;
+      }
+
+      span:nth-child(3) {
+              color: white;
+        background: rgba(15, 110, 15, 0.829);
+        padding: 5px;
+        border-radius: 7px;
+      }
 .links {
   flex: 2;
   max-width: 60vw;
@@ -45,8 +62,10 @@ nav {
   display: flex;
   margin: 20px 0 0 80px;
 }
+
 .link {
   flex: 1;
+  text-transform: uppercase;
 }
 .welcome {
   padding: 0 100px;
