@@ -94,7 +94,7 @@ em {
 @media (max-width: 500px) {
 
   .title {
-    margin-top: 100px;
+    margin-top: 0;
   }
   .title img {
     display: none;
@@ -107,7 +107,7 @@ em {
   }
 
   .form {
-    margin-top: 60px;
+    margin-top: 0;
     max-width: 100%;
     display: grid;
     grid-template-columns: 40% 50%;
