@@ -26,12 +26,14 @@
 }
 
 #div-image {
-  max-width: 20vw;
-  margin-left: 25%;
+  /* max-width: 20vw; */
+  display: grid;
+  justify-self: center;
   background-size: contain;
   background-repeat: no-repeat;
   height: 20vh; 
   border-radius: 7px;
+  margin: 0;
 }
 
 
@@ -64,7 +66,6 @@ textarea {
   transition: all 0.3s ease;
   height: 45px;
   width: 90px;
-  /* margin-left: 50%; */
   font-size: 25px;
   font-weight: 100;
   text-transform: lowercase;
@@ -90,10 +91,6 @@ em {
   flex-wrap: wrap;
 }
 
-/* .ingredients-and-instruction-div {
-  grid-column: 2 / span 1;
-} */
-
 @media (max-width: 500px) {
 
   .title {
@@ -112,6 +109,8 @@ em {
   .form {
     margin-top: 60px;
     max-width: 100%;
+    display: grid;
+    grid-template-columns: 40% 50%;
   }
 
   .form div {
@@ -135,7 +134,8 @@ em {
     color: gray;
   }
 
-  button {
-    margin-left: 75%;
+.save-button {
+  grid-column: 1;
+  align-self: end;
   }
 }

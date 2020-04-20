@@ -75,18 +75,6 @@ class RecipeEdit extends Component {
               />
             </div>
             <div className='form-recipe-item'>
-              <label for="input-image-link">Image Link</label>
-              <input
-                className="input-image-link"
-                value={recipe.img}
-                name="img"
-                required
-                onChange={this.handleChange}
-              />
-            </div>
-            <div id="div-image" style={{ backgroundImage: "url(" + divImage + ")" }}>
-            </div>
-            <div className='form-recipe-item'>
               <label for="input-cuisine">Cuisine</label>
               <input
                 className="input-cuisine"
@@ -140,6 +128,18 @@ class RecipeEdit extends Component {
                 autoFocus
                 onChange={this.handleChange}
               />
+            </div>
+            <div className='form-recipe-item'>
+              <label for="input-image-link">Image Link</label>
+              <input
+                className="input-image-link"
+                value={recipe.img}
+                name="img"
+                required
+                onChange={this.handleChange}
+              />
+            </div>
+            <div id="div-image" style={{ backgroundImage: "url(" + divImage + ")" }}>
             </div>
           </div>
           <div className='ingredients-and-instruction-div'>

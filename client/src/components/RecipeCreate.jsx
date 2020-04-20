@@ -44,6 +44,8 @@ class RecipeCreate extends Component {
 
   render() {
     const { recipe, created } = this.state;
+    let divImage = recipe.img;
+
 
     if (created) {
       return <Redirect to={`/recipes`} />;
@@ -65,16 +67,6 @@ class RecipeCreate extends Component {
                 name="name"
                 required
                 autoFocus
-                onChange={this.handleChange}
-              />
-            </div>
-            <div className='form-recipe-item'>
-              <label for="input-image-link">Image Link<em>*</em></label>
-              <input
-                className="input-image-link"
-                value={recipe.img}
-                name="img"
-                required
                 onChange={this.handleChange}
               />
             </div>
@@ -132,6 +124,18 @@ class RecipeCreate extends Component {
                 autoFocus
                 onChange={this.handleChange}
               />
+            </div>
+            <div className='form-recipe-item'>
+              <label for="input-image-link">Image Link<em>*</em></label>
+              <input
+                className="input-image-link"
+                value={recipe.img}
+                name="img"
+                required
+                onChange={this.handleChange}
+              />
+            </div>
+            <div id="div-image" style={{ backgroundImage: "url(" + divImage + ")" }}>
             </div>
           </div>
           <div className='ingredients-and-instruction-div'>
