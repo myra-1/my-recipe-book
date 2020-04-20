@@ -126,7 +126,7 @@ button {
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
-  height: Calc(100vh - 4em);
+  height: 100vh;
 }
 
 .layout .content {
