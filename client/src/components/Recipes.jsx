@@ -24,12 +24,11 @@ class Recipes extends Component {
   }
 
   handleSearchChange = event => {
-    // const filteredKeys = Object.keys(recipes).filter(key => {
-    //   return key.includes("name" || "cuisine")
-    // })
+    
     const filter = () => {
       const filteredRecipes = this.state.recipes.filter(recipe => {
-        return recipe.name.toLowerCase().includes(this.state.filterValue.toLowerCase())
+        return recipe.cuisine.toLowerCase().includes(this.state.filterValue.toLowerCase()) ||
+        recipe.name.toLowerCase().includes(this.state.filterValue.toLowerCase())
       })
       this.setState({ filteredRecipes })
     }
