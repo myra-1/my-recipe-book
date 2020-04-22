@@ -82,14 +82,22 @@ class App extends Component {
             exact
             path="/add-recipe"
             render={() =>
-              user ? <RecipeCreate user={user} /> : <Redirect to="/signup" />
+              user ? (
+                <RecipeCreate user={user} />
+              ) : (
+                <Redirect to="/add-recipe" />
+              )
             }
           />
           <Route
             exact
             path="/recipes/:id/edit"
             render={(props) =>
-              user ? <RecipeEdit {...props} user={user} /> : <Redirect to="/" />
+              user ? (
+                <RecipeEdit {...props} user={user} />
+              ) : (
+                <Redirect to="/recipes/:id/edit" />
+              )
             }
           />
           <Route
