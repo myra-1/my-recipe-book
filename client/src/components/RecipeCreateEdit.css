@@ -31,19 +31,17 @@
   justify-self: center;
   background-size: contain;
   background-repeat: no-repeat;
-  height: 20vh; 
+  height: 20vh;
   border-radius: 7px;
   margin: 0;
 }
 
-
 label {
-  font-size: .85em;
+  font-size: 0.85em;
   margin-left: 10px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 400;
 }
-
 
 input:focus,
 textarea:focus,
@@ -53,7 +51,7 @@ select:focus {
 
 input,
 textarea {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 24px;
   border: 0.5px solid lightgrey;
   border-radius: 5px;
@@ -82,7 +80,6 @@ em {
 
 .recipe-items-div {
   padding-top: 3.5px;
-
 }
 
 .form-recipe-item {
@@ -92,14 +89,13 @@ em {
 }
 
 @media (max-width: 500px) {
-
   .title {
     margin-top: 0;
   }
   .title img {
     display: none;
   }
-  
+
   .title h2 {
     font-size: 24px;
     margin-right: 0;
@@ -124,7 +120,8 @@ em {
     margin-left: 0;
   }
 
-  textarea, input {
+  textarea,
+  input {
     width: 100%;
     padding: 0px;
     font-size: 18px;
@@ -134,8 +131,8 @@ em {
     color: gray;
   }
 
-.save-button {
-  grid-column: 1;
-  align-self: end;
+  .save-button {
+    grid-column: 1;
+    align-self: end;
   }
 }

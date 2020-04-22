@@ -4,7 +4,6 @@ import Layout from "./shared/Layout";
 import { Redirect } from "react-router-dom";
 import { createRecipe } from "../services/recipe";
 
-
 class RecipeCreate extends Component {
   constructor(props) {
     super(props);
@@ -20,7 +19,7 @@ class RecipeCreate extends Component {
         serves: "",
         ingredients: "",
         instructions: "",
-        user_id: this.props.user._id || this.props.user.user.id
+        user_id: this.props.user._id || this.props.user.user.id,
       },
       created: false,
     };
@@ -46,7 +45,6 @@ class RecipeCreate extends Component {
     const { recipe, created } = this.state;
     let divImage = recipe.img;
 
-
     if (created) {
       return <Redirect to={`/recipes`} />;
     }
@@ -58,9 +56,11 @@ class RecipeCreate extends Component {
         </div>
 
         <form className="form" onSubmit={this.handleSubmit}>
-          <div className='recipe-items-div'>
-            <div className='form-recipe-item'>
-              <label for="input-name">Dish Name<em>*</em></label>
+          <div className="recipe-items-div">
+            <div className="form-recipe-item">
+              <label for="input-name">
+                Dish Name<em>*</em>
+              </label>
               <input
                 className="input-name"
                 value={recipe.name}
@@ -70,8 +70,10 @@ class RecipeCreate extends Component {
                 onChange={this.handleChange}
               />
             </div>
-            <div className='form-recipe-item'>
-              <label for="input-cuisine">Cuisine<em>*</em></label>
+            <div className="form-recipe-item">
+              <label for="input-cuisine">
+                Cuisine<em>*</em>
+              </label>
               <input
                 className="input-cuisine"
                 value={recipe.cuisine}
@@ -81,8 +83,10 @@ class RecipeCreate extends Component {
                 onChange={this.handleChange}
               />
             </div>
-            <div className='form-recipe-item'>
-              <label for="input-difficulty">Difficulty<em>*</em></label>
+            <div className="form-recipe-item">
+              <label for="input-difficulty">
+                Difficulty<em>*</em>
+              </label>
               <input
                 className="input-difficulty"
                 value={recipe.difficulty}
@@ -92,8 +96,10 @@ class RecipeCreate extends Component {
                 onChange={this.handleChange}
               />
             </div>
-            <div className='form-recipe-item'>
-              <label for="input-preptime">Prep Time<em>*</em></label>
+            <div className="form-recipe-item">
+              <label for="input-preptime">
+                Prep Time<em>*</em>
+              </label>
               <input
                 className="input-preptime"
                 value={recipe.preptime}
@@ -103,8 +109,10 @@ class RecipeCreate extends Component {
                 onChange={this.handleChange}
               />
             </div>
-            <div className='form-recipe-item'>
-              <label for="input-cooktime">Cook Time<em>*</em></label>
+            <div className="form-recipe-item">
+              <label for="input-cooktime">
+                Cook Time<em>*</em>
+              </label>
               <input
                 className="input-cooktime"
                 value={recipe.cooktime}
@@ -114,8 +122,10 @@ class RecipeCreate extends Component {
                 onChange={this.handleChange}
               />
             </div>
-            <div className='form-recipe-item'>
-              <label for="input-serves">Serves<em>*</em></label>
+            <div className="form-recipe-item">
+              <label for="input-serves">
+                Serves<em>*</em>
+              </label>
               <input
                 className="input-serves"
                 value={recipe.serves}
@@ -125,8 +135,10 @@ class RecipeCreate extends Component {
                 onChange={this.handleChange}
               />
             </div>
-            <div className='form-recipe-item'>
-              <label for="input-image-link">Image Link<em>*</em></label>
+            <div className="form-recipe-item">
+              <label for="input-image-link">
+                Image Link<em>*</em>
+              </label>
               <input
                 className="input-image-link"
                 value={recipe.img}
@@ -135,12 +147,16 @@ class RecipeCreate extends Component {
                 onChange={this.handleChange}
               />
             </div>
-            <div id="div-image" style={{ backgroundImage: "url(" + divImage + ")" }}>
-            </div>
+            <div
+              id="div-image"
+              style={{ backgroundImage: "url(" + divImage + ")" }}
+            ></div>
           </div>
-          <div className='ingredients-and-instruction-div'>
+          <div className="ingredients-and-instruction-div">
             <div>
-              <label className='label-ingredients' for="textarea-ingredients">Ingredients<em>*</em></label>
+              <label className="label-ingredients" for="textarea-ingredients">
+                Ingredients<em>*</em>
+              </label>
               <textarea
                 className="textarea-ingredients"
                 rows={10}
@@ -152,7 +168,9 @@ class RecipeCreate extends Component {
               />
             </div>
             <div>
-              <label for="textarea-instructions">Instructions<em>*</em></label>
+              <label for="textarea-instructions">
+                Instructions<em>*</em>
+              </label>
               <textarea
                 className="textarea-instructions"
                 rows={10}
@@ -166,7 +184,7 @@ class RecipeCreate extends Component {
           </div>
           <button type="submit" className="save-button">
             Save
-            </button>
+          </button>
         </form>
       </Layout>
     );

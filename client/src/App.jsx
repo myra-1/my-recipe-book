@@ -1,54 +1,116 @@
-import React, { Component } from 'react'
-import './App.css'
+import React, { Component } from "react";
+import "./App.css";
 // import Home from './components/Home'
-import Recipes from './components/Recipes'
-import RecipeCreate from './components/RecipeCreate'
-import RecipeEdit from './components/RecipeEdit'
-import RecipeDetail from './components/RecipeDetail'
-import { Route, Switch, Redirect } from 'react-router-dom'
-import { verifyUser } from './services/user'
-import SignUp from './components/SignUp'
-import SignIn from './components/SignIn'
-import SignOut from './components/SignOut'
-import MyRecipes from './components/MyRecipes'
+import Recipes from "./components/Recipes";
+import RecipeCreate from "./components/RecipeCreate";
+import RecipeEdit from "./components/RecipeEdit";
+import RecipeDetail from "./components/RecipeDetail";
+import { Route, Switch, Redirect } from "react-router-dom";
+import { verifyUser } from "./services/user";
+import SignUp from "./components/SignUp";
+import SignIn from "./components/SignIn";
+import SignOut from "./components/SignOut";
+import MyRecipes from "./components/MyRecipes";
 
 class App extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
-      user: null
-    }
+      user: null,
+    };
   }
 
   async componentDidMount() {
-    const user = await verifyUser()
+    const user = await verifyUser();
     if (user) {
-      this.setState({ user })
+      this.setState({ user });
     }
   }
 
-  setUser = user => this.setState({ user })
+  setUser = (user) => this.setState({ user });
 
-  clearUser = () => this.setState({ user: null })
+  clearUser = () => this.setState({ user: null });
 
   render() {
-    const { setUser, clearUser } = this
-    const { user } = this.state
+    const { setUser, clearUser } = this;
+    const { user } = this.state;
     return (
       <div className="app">
         <Switch>
-          <Route exact path="/" render={(props) => <Recipes {...props} user={user} />} />
-          <Route exact path="/sign-up" render={props => <SignUp setUser={setUser} history={props.history} />} />
-          <Route exact path="/sign-in" render={props => <SignIn setUser={setUser} history={props.history} />} />
-          <Route exact path="/sign-out" render={props => <SignOut user={user} clearUser={clearUser} history={props.history} />} />
-          <Route exact path="/recipes" render={(props) => user ? <MyRecipes {...props} user={user} /> : <Recipes {...props} user={user} />} />
-          <Route exact path="/add-recipe" render={() => user ? <RecipeCreate user={user} /> : <Redirect to='/signup' />} />
-          <Route exact path="/recipes/:id/edit" render={(props) => user ? <RecipeEdit {...props} user={user} /> : <Redirect to='/' />} />
-          <Route exact path="/recipes/:id" render={(props) => <RecipeDetail {...props} history={props.history} user={user} />} />
+          <Route
+            exact
+            path="/"
+            render={(props) => <Recipes {...props} user={user} />}
+          />
+          <Route
+            exact
+            path="/sign-up"
+            render={(props) => (
+              <SignUp setUser={setUser} history={props.history} />
+            )}
+          />
+          <Route
+            exact
+            path="/sign-in"
+            render={(props) => (
+              <SignIn setUser={setUser} history={props.history} />
+            )}
+          />
+          <Route
+            exact
+            path="/sign-out"
+            render={(props) => (
+              <SignOut
+                user={user}
+                clearUser={clearUser}
+                history={props.history}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/recipes"
+            render={(props) =>
+              user ? (
+                <MyRecipes {...props} user={user} />
+              ) : (
+                <Recipes {...props} user={user} />
+              )
+            }
+          />
+          <Route
+            exact
+            path="/add-recipe"
+            render={() =>
+              user ? (
+                <RecipeCreate user={user} />
+              ) : (
+                <Redirect to="/add-recipe" />
+              )
+            }
+          />
+          <Route
+            exact
+            path="/recipes/:id/edit"
+            render={(props) =>
+              user ? (
+                <RecipeEdit {...props} user={user} />
+              ) : (
+                <Redirect to="/recipes/:id/edit" />
+              )
+            }
+          />
+          <Route
+            exact
+            path="/recipes/:id"
+            render={(props) => (
+              <RecipeDetail {...props} history={props.history} user={user} />
+            )}
+          />
         </Switch>
       </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;
